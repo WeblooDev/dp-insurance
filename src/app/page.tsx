@@ -1,17 +1,13 @@
-import Link from "next/link";
-import { Card } from "@/components/ui/card";
+
 import { getServices } from "@/data/service";
 import Request from "./sections/Request";
 import WhyUs from './sections/whyUs';
 import ImageSection from './sections/ImageSection';
 import SplitSection from "./sections/SplitSection";
 import ContactUs from './sections/ContactUs';
-import { ArrowRight, Download } from 'lucide-react';
-import DynamicSection from "./sections/Template";
 import ServiceCard from "./sections/Template";
 import FAQSection from './sections/FaqSection';
 import HeroCarousel from "./sections/Hero";
-import HeroTemplate from "./sections/HeroTemplate";
 import LineCall from './sections/LineCall';
 
 export default async function Home() {
@@ -30,15 +26,16 @@ export default async function Home() {
             <h1>What we Cover</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
+        {services.map((service, index) => (
             <ServiceCard
               key={service.id}
               id={service.id}
               name={service.name}
               imageUrl={service.backgroundImage || "/default-service.jpg"}
-            
+              index={index} // ✅ Pass the missing prop
             />
           ))}
+
         </div>
         </section>
 
@@ -105,11 +102,7 @@ export default async function Home() {
             title="Request Your Complimetay Quote"
             description="When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events."
             backgroundImage="/contact.png"
-            buttons={[
-            { text: "Download Now", icon: <Download className="h-4 w-4" /> },
-            { text: "Learn More", variant: "secondary" },
-            { text: "Get Started", variant: "outline", icon: <ArrowRight className="h-4 w-4" /> },
-            ]}
+           
         />
 
     

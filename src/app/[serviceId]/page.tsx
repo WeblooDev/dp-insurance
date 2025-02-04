@@ -1,26 +1,28 @@
-import { getServiceById } from "@/data/service";
+import { getServiceById, getServices } from "@/data/service";
 import { notFound } from "next/navigation";
-import { Card } from "@/components/ui/card";
-import ImageSection from '../sections/ImageSection';
+import ImageSection from "../sections/ImageSection";
 import Request from "../sections/Request";
-import WhyUs from '../sections/whyUs';
-import SplitSection from '../sections/SplitSection';
+import SplitSection from "../sections/SplitSection";
 import FAQSection from "../sections/FaqSection";
 import HeroTemplate from "../sections/HeroTemplate";
 import ContactUs from "../sections/ContactUs";
+import WhyUs from "../sections/whyUs";
 
-interface PageProps {
-  params: { serviceId: string };
+// ✅ Fix: Ensure `params` is awaited
+interface ServicePageProps {
+  params: Promise<{ serviceId: string }>; // Ensure it's recognized as a Promise
 }
 
-export default async function ServicePage({ params }: PageProps) {
-  // ✅ Await params before using it
-  const { serviceId } = await params; // Await the params object before using it
+export default async function ServicePage({ params }: ServicePageProps) {
+  const resolvedParams = await params; // ✅ Await the params
+  const { serviceId } = resolvedParams; // ✅ Now it's a resolved object
 
-  // Fetch service data
+  if (!serviceId) {
+    throw new Error("Service ID is missing! Check your URL.");
+  }
+
   const service = await getServiceById(serviceId);
 
-  // Handle missing service
   if (!service) {
     return notFound();
   }
@@ -32,7 +34,6 @@ export default async function ServicePage({ params }: PageProps) {
           title={service.heroSection.title}
           description={service.heroSection.description}
           backgroundImage={service.heroSection.backgroundImage}
-          buttons={service.heroSection.buttons}
         />
       )}
 
@@ -85,4 +86,12 @@ export default async function ServicePage({ params }: PageProps) {
       )}
     </main>
   );
+}
+
+// ✅ Fix: Ensure Next.js knows available service routes
+export async function generateStaticParams() {
+  const services = await getServices();
+  return services.map((service) => ({
+    serviceId: service.id,
+  }));
 }

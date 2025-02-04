@@ -1,17 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface HeroTemplateProps {
   title: string;
   description: string;
   backgroundImage: string;
-  buttons?: Array<{ text: string; icon?: JSX.Element; variant?: "default" | "secondary" | "outline" }>;
 }
 
-export default function HeroTemplate({ title, description, backgroundImage, buttons }: HeroTemplateProps) {
+export default function HeroTemplate({ title, description, backgroundImage }: HeroTemplateProps) {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}

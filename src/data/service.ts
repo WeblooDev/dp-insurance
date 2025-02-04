@@ -1,57 +1,57 @@
 export type Service = {
-    id: string;
-    name: string;
-    sections: Array<{ title: string; content: string }>;
-    backgroundImage?: string; 
-    requestContent?: {
-      title: string;
-      buttonText: string;
-      backgroundImage: string;
-    };
-    whyUsContent?: {
-      title: string;
-      description: string;
-      services: Array<{ 
-        image: string; 
-        name: string; 
-        description: string; 
-        isDimmed?: boolean;  // ✅ New property
-        overlayImage?: string;  // ✅ New property to specify the overlay image
-      }>;
-    };
-    imageSection?: { 
-      imageUrl: string;
-      altText: string;
-    };
-    faqSection?: { 
-        title: string;
-        description: string;
-        faqs: Array<{ question: string; answer: string }>;
-      };
-      contactUsContent?: { // ✅ New section
-        title: string;
-        description: string;
-        backgroundImage: string;
-      };
-      splitSection?: { 
-        imageUrl: string;
-        content: Array<{ title: string; description: string }>;
-    };
-    heroSection?: { // ✅ New section for HeroTemplate
-        title: string;
-        description: string;
-        backgroundImage: string;
-        buttons: Array<{ text: string; variant?: "default" | "secondary" | "outline" }>;
-      };
-
-
+  id: string;
+  name: string;
+  sections: Array<{ title: string; content: string }>;
+  backgroundImage?: string;
+  requestContent?: {
+    title: string;
+    buttonText?: string; // ✅ Made optional
+    backgroundImage: string;
   };
+  whyUsContent?: {
+    title: string;
+    description: string;
+    services: Array<{
+      image: string;
+      name: string;
+      description: string;
+      isDimmed?: boolean; // ✅ Optional
+      overlayImage?: string; // ✅ Optional
+    }>;
+  };
+  imageSection?: {
+    imageUrl: string;
+    altText: string;
+  };
+  faqSection?: {
+    title: string;
+    description: string;
+    faqs: Array<{ question: string; answer: string }>;
+  };
+  contactUsContent?: {
+    title: string;
+    description: string;
+    backgroundImage: string;
+  };
+  splitSections?: Array<{ // ✅ Fixed naming issue
+    imageUrl: string;
+    content: Array<{ title: string; description: string }>;
+    reverse?: boolean;
+  }>;
+  heroSection?: {
+    title: string;
+    description: string;
+    backgroundImage: string;
+    buttons: Array<{ text: string; variant?: "default" | "secondary" | "outline" }>;
+  };
+};
+
   
   export const getServices = async (): Promise<Service[]> => {
     return [
       {
         id: "automotive",
-        name: "Automotive Insurances",
+        name: "Automotive Insurance",
         backgroundImage: "/automotive.png",
         heroSection: { 
             title: "Quality Insurance for Luxury Cars",
@@ -119,7 +119,7 @@ export type Service = {
       },
       {
         id: "jewelry",
-        name: "jewelry Insurance",
+        name: "Jewelry Insurance",
         backgroundImage: "/jewelry.png",
         heroSection: { 
             title: "Quality Insurance for Luxury Carssss",
@@ -211,7 +211,7 @@ export type Service = {
           imageUrl:"/placeholder.png",
           altText: "Jewelry Insurance Banner"
           },
-          splitSection: [
+          splitSections: [
             {
               imageUrl: "/rightr.png",
               content: [
@@ -397,10 +397,13 @@ export type Service = {
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
             backgroundImage: "/marinefooter.png",
           },
+          sections: []
+
       },
+
       {
         id: "Wine",
-        name: "Wine",
+        name: "Wine and ",
         backgroundImage: "/wine.png",
         heroSection: { 
             title: "Premium Insurance for Wine and Spirits",
@@ -469,6 +472,8 @@ export type Service = {
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
             backgroundImage: "/winefooter.png",
           },
+          sections: []
+
       },
     
     ];
@@ -476,7 +481,9 @@ export type Service = {
 
   
   export const getServiceById = async (id: string): Promise<Service | null> => {
-    const services = await getServices();
+    const services = await getServices(); // ✅ Ensure `await` is used here
     return services.find((service) => service.id === id) || null;
   };
+  
+  
   
