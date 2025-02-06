@@ -39,7 +39,11 @@ export default function ContactUs({ title, backgroundImage, buttons }: ContactUs
                 }`}
             >
               {button.iconSrc && <img src={button.iconSrc} alt="" className="w-5 h-5" />}
+              <a href="https://www.dupontregistry.com/insurance/get-quote">
+
               {button.text}
+              </a>
+
             </Button>
           ))}
         </div>

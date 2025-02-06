@@ -1,6 +1,5 @@
 import { getServiceById, getServices } from "@/data/service";
 import { notFound } from "next/navigation";
-import ImageSection from "../sections/ImageSection";
 import Request from "../sections/Request";
 import SplitSection from "../sections/SplitSection";
 import FAQSection from "../sections/FaqSection";

@@ -50,7 +50,7 @@ export default function HeroTemplate({ title, description, backgroundImage, show
             size="lg"
             className="rounded-[45px] !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90"
           >
-            <a href="https://www.dupontregistry.com/insurance/get-quote" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.dupontregistry.com/insurance/get-quote">
               Get Quote
             </a>
           </Button>

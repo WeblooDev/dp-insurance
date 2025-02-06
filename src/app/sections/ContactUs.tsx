@@ -44,7 +44,7 @@ export default function ContactUs({ title, description, backgroundImage }: Conta
             size="lg"
             className="rounded-[45px] !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90"
           >
-            <a href="https://www.dupontregistry.com/insurance/get-quote" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.dupontregistry.com/insurance/get-quote">
               Get Quote
             </a>
           </Button>
@@ -64,17 +64,5 @@ export default function ContactUs({ title, description, backgroundImage }: Conta
   );
 }
 
-interface ContactButtonProps {
-  iconSrc?: string;
-  text: string;
-  className?: string;
-}
 
-function ContactButton({ iconSrc, text, className }: ContactButtonProps) {
-  return (
-    <Button size="lg" className={`flex items-center justify-center gap-2 rounded-[45px] transition-all duration-300 ${className}`}>
-      {iconSrc && <img src={iconSrc} alt={text} className="w-5 h-5" />}
-      {text}
-    </Button>
-  );
-}
+

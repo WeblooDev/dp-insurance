@@ -15,7 +15,11 @@ export default function LineCall({ title }: LineCallProps) {
           size="lg"
           className="rounded-[45px] !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90 mx-auto md:mx-0"
         >
+           <a href="tel:+123456789">
           Call us Now
+          </a>
+         
+                
         </Button>
       </div>
     </section>
