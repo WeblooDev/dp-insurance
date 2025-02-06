@@ -162,7 +162,7 @@ export type Service = {
         },
         splitSections: [ // ✅ Use an array to hold multiple SplitSections
             {
-              imageUrl: "/jewelryrightsspecial.png",
+              imageUrl: "/jewelryright1.png",
               content: [
                 { title: "Mysterious disappearance", description: "Mysterious disappearance coverage protects your jewelry collection against unexplained loss, offering reassurance in situations where items vanish without a clear cause." },
                 { title: "Coverage for newly acquired Items", description: "Provides automatic, temporary coverage for newly purchased items until they are officially added to the policy." },
@@ -171,7 +171,7 @@ export type Service = {
               reverse: false, // Normal order
             },
             {
-              imageUrl: "/jewelrylefts.png",
+              imageUrl: "/jewelryleft1.png",
               content: [
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out—we’re happy to help ensure your prized possessions are properly protected." },
           
