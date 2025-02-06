@@ -26,7 +26,7 @@ export default function HeroTemplate({ title, description, backgroundImage, show
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
-      <div className="container mx-auto flex flex-col h-full p-4 md:p-12 md:pt-40 justify-center lg:justify-between">
+      <div className="container mx-auto gap-6 flex flex-col h-full p-4 md:p-12 md:pt-40 justify-center lg:justify-between">
       
           <div className="flex flex-col items-center justify-center">
           <h2 className="font-ivar mb-4 text-[40px] md:text-[50px] text-white">{title}</h2>

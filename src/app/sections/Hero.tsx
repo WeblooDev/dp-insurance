@@ -40,7 +40,7 @@ export default function HeroStatic() {
       </div>
 
       {/* Content */}
-      <div className="flex h-full justify-center md:justify-between items-center flex-col relative z-10 p-4 md:p-12 md:pt-44 text-center">
+      <div className="flex h-full justify-center md:justify-between gap-6 items-center flex-col relative z-10 p-4 md:p-12 md:pt-44 text-center">
       <div className="flex flex-col items-center justify-center ">
         <h2 className="font-ivar mb-4 text-[40px] md:text-[50px] text-white">
         duPont REGISTRY Insurance
