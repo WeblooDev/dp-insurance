@@ -34,8 +34,8 @@ export default function HeroTemplate({ title, description, backgroundImage, show
           </div>
 
           {showButtons && (
-            <div className="flex gap-4 align-center justify-center sm:flex-row sm:gap-6">
-              <Button
+            <div className="flex flex-col justify-center items-center gap-4 sm:flex-row sm:gap-6">
+            <Button
             asChild
             size="lg"
             className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
