@@ -8,7 +8,7 @@ interface ContactUsProps {
 
 export default function ContactUs({ title, backgroundImage, buttons }: ContactUsProps) {
   return (
-    <section className="relative min-h-[500px] w-full flex items-center justify-center">
+    <section className="relative min-h-[500px] w-full flex items-center justify-center my-16">
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
@@ -21,7 +21,7 @@ export default function ContactUs({ title, backgroundImage, buttons }: ContactUs
 
       {/* Content */}
       <div className="relative z-10 container px-4 md:px-6 text-center">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4">
+        <h1 className="font-ivar text-[30px] md:text-[40px] text-white mb-6" >
           {title}
         </h1>
 

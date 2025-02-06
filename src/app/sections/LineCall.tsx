@@ -8,7 +8,7 @@ export default function LineCall({ title }: LineCallProps) {
   return (
 <section className="w-full mx-auto px-4 sm:px-12 p-4">
 <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-center md:text-left">
-        <h1 className="text-5xl font-bold tracking-tighter">
+<h1 className="font-ivar text-[30px] md:text-[40px]">
           {title}
         </h1>
         <Button

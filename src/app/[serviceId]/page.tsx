@@ -7,6 +7,7 @@ import FAQSection from "../sections/FaqSection";
 import HeroTemplate from "../sections/HeroTemplate";
 import ContactUs from "../sections/ContactUs";
 import WhyUs from "../sections/whyUs";
+import MediaSection from "../sections/ImageSection";
 
 // ✅ Fix: Ensure `params` is awaited
 interface ServicePageProps {
@@ -29,11 +30,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <main className="min-h-screen bg-gray-100">
-      {service.heroSection && (
+     
+     {service.heroSection && (
         <HeroTemplate
           title={service.heroSection.title}
           description={service.heroSection.description}
           backgroundImage={service.heroSection.backgroundImage}
+          showButtons={service.heroSection.showButtons} 
         />
       )}
 
@@ -45,12 +48,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
         />
       )}
 
-      {service.imageSection && (
-        <ImageSection
-          imageUrl={service.imageSection.imageUrl}
-          altText={service.imageSection.altText}
-        />
-      )}
+    {service.imageSection && (
+      <MediaSection
+        mediaUrl={service.imageSection.mediaUrl}
+        altText={service.imageSection.altText}
+      />
+    )}
+
 
       {service.splitSections?.map((splitSection, index) => (
         <SplitSection

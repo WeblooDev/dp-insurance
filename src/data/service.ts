@@ -5,7 +5,7 @@ export type Service = {
   backgroundImage?: string;
   requestContent?: {
     title: string;
-    buttonText?: string; // ✅ Made optional
+    buttonText?: string;
     backgroundImage: string;
   };
   whyUsContent?: {
@@ -15,12 +15,12 @@ export type Service = {
       image: string;
       name: string;
       description: string;
-      isDimmed?: boolean; // ✅ Optional
-      overlayImage?: string; // ✅ Optional
+      isDimmed?: boolean;
+      overlayImage?: string;
     }>;
   };
   imageSection?: {
-    imageUrl: string;
+    mediaUrl: string;
     altText: string;
   };
   faqSection?: {
@@ -33,7 +33,7 @@ export type Service = {
     description: string;
     backgroundImage: string;
   };
-  splitSections?: Array<{ // ✅ Fixed naming issue
+  splitSections?: Array<{
     imageUrl: string;
     content: Array<{ title: string; description: string }>;
     reverse?: boolean;
@@ -42,9 +42,10 @@ export type Service = {
     title: string;
     description: string;
     backgroundImage: string;
-    buttons: Array<{ text: string; variant?: "default" | "secondary" | "outline" }>;
+    showButtons?: boolean; // ✅ New field (false by default)
   };
 };
+
 
   
   export const getServices = async (): Promise<Service[]> => {
@@ -56,27 +57,25 @@ export type Service = {
         heroSection: { 
             title: "Quality Insurance for Luxury Cars",
             description: "Personalized Protection for Your Prized Vehicles",
-            backgroundImage: "/hero1.png",
-            buttons: [
-              { text: "Get a Quote", variant: "default" },
-              { text: "Learn More", variant: "secondary" },
-            ],
+            backgroundImage: "/automotiveHero.png",
+            showButtons: true, 
+          
           },
           contactUsContent: { // ✅ Add contact section dynamically
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
-            backgroundImage: "/footer.png",
+            backgroundImage: "/automotivefooter.png",
           },
           requestContent: {
-            title: "Protect Your Jewelry Today",
+            title: "Request Your Exclusive Custom Insurance Quote",
             buttonText: "Get a Jewelry Quote",
-            backgroundImage: "/ferrari.png",
+            backgroundImage: "/automotiveferrari.png",
           },
         faqSection: { // ✅ Only Jewelry Insurance has this section
             title: "Jewelry Insurance FAQs",
             description: "Find answers to common questions about jewelry insurance coverage and claims.",
             faqs: [
-              { question: "What does jewelry insurance cover?", answer: "Jewelry insurance covers loss, theft, and accidental damage." },
+              { question: "What is duPont REGISTRY insurance", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
               { question: "How do I file a claim?", answer: "You can file a claim online through our easy-to-use portal." },
               { question: "Do I need an appraisal?", answer: "Yes, an appraisal is required for items valued over $5,000." },
               { question: "How much does jewelry insurance cost?", answer: "Our rates vary based on the item’s value and your location." },
@@ -84,30 +83,30 @@ export type Service = {
           },
         
           whyUsContent: {
-            title: "Why Choose Our Automotive Insurance?",
+            title: "What We Cover",
             description: "We provide the best coverage for luxury and commercial vehicles.",
             services: [
-              { image: "/c1.png", name: "Liability Coverage", description: "Pays for damages if you're at fault.", isDimmed: true, overlayImage:"/layer1.png"  },
-              { image: "/c2.png", name: "Comprehensive Coverage", description: "Covers theft, fire, vandalism, etc.", isDimmed: true, overlayImage: "/layer2.png" },  // ✅ Dimmed with overlay
-              { image: "/c3.png", name: "Collision Coverage", description: "Covers damage from collisions.", isDimmed: true, overlayImage:"/layer3.png"  }
+              { image: "/automotivecover1.png", name: "Liability Coverage", description: "This mandatory coverage pays for damages you cause to others' property or injuries in an accident where you're at fault..", isDimmed: true, overlayImage:"/layer1.png"  },
+              { image: "/automotivecover2.png", name: "Comprehensive Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.", isDimmed: true, overlayImage: "/layer2.png" },  // ✅ Dimmed with overlay
+              { image: "/automotivecover3.png", name: "Collision Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it overturns or collides with another vehicle or object.", isDimmed: true, overlayImage:"/layer3.png"  }
             ]
           },
-        imageSection: { // ✅ Only Jewelry Insurance has this section
-          imageUrl:"/placeholder.png",
+        imageSection: { 
+          mediaUrl:"/automotivevideo.mp4",
           altText: "Jewelry Insurance Banner"
         },
-        splitSections: [ // ✅ Use an array to hold multiple SplitSections
+        splitSections: [ 
             {
-              imageUrl: "/leftauto.png",
+              imageUrl: "/automotiverleft.png",
               content: [
-                { title: "Comprehensive Protection", description: "Your jewelry is safe with our industry-leading coverage." },
-                { title: "Easy Online Claims", description: "Submit claims in minutes and get fast approvals." },
-                { title: "Trusted by Thousands", description: "Join our satisfied customers who rely on us for protection." }
+                { title: "Third-Party Liability Protection ", description: "This mandatory coverage pays for damages you cause to others' property or injuries in an accident where you're at fault." },
+                { title: "Accident Damage Protection", description: "This optional coverage helps pay to repair or replace your vehicle if it overturns or collides with another vehicle or object." },
+                { title: "Non-Collision Damage Protection", description: "This optional coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal." }
               ],
               reverse: false, // Normal order
             },
             {
-              imageUrl: "/rightauto.png",
+              imageUrl: "/automotiveright.png",
               content: [
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out—we’re happy to help ensure your prized possessions are properly protected." },
           
@@ -122,29 +121,26 @@ export type Service = {
         name: "Jewelry Insurance",
         backgroundImage: "/jewelry.png",
         heroSection: { 
-            title: "Quality Insurance for Luxury Carssss",
-            description: "Personalized Protection for Your Prized Vehicles",
-            backgroundImage: "/jewelryhero.png",
-            buttons: [
-              { text: "Get a Quote", variant: "default" },
-              { text: "Learn More", variant: "secondary" },
-            ],
+            title: "Premium Insurance for Fine Jewelry and Collectibles",
+            description: "Personalized Protection for Your Treasured Collection",
+            backgroundImage: "/Jewelryhero.png",
+
           },
           contactUsContent: { // ✅ Add contact section dynamically
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
-            backgroundImage: "/footerjewelry.png",
+            backgroundImage: "/Jewelryrolex.png",
           },
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
             buttonText: "Get a Jewelry Quote",
-            backgroundImage: "/Requestjewelry.png",
+            backgroundImage: "/Jewelryhand.png",
           },
         faqSection: { // ✅ Only Jewelry Insurance has this section
             title: "Jewelry Insurance FAQs",
             description: "Find answers to common questions about jewelry insurance coverage and claims.",
             faqs: [
-              { question: "What does jewelry insurance cover?", answer: "Jewelry insurance covers loss, theft, and accidental damage." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
               { question: "How do I file a claim?", answer: "You can file a claim online through our easy-to-use portal." },
               { question: "Do I need an appraisal?", answer: "Yes, an appraisal is required for items valued over $5,000." },
               { question: "How much does jewelry insurance cost?", answer: "Our rates vary based on the item’s value and your location." },
@@ -155,18 +151,18 @@ export type Service = {
             title: "What We Cover",
             description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/coverjewelry.png", name: "Agreed Value", description: "This essential coverage pays for repair or replacement costs if your jewelry is lost, stolen, or damaged, ensuring peace of mind for your valuable items.", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
-              { image: "/cover2jewelry.png", name: "Worldwide coverage", description: "This coverage protects items wherever they are located, whether at home, in transit, or on display (e.g., in galleries, museums, or private events).", isDimmed: true, overlayImage: "/coverjewelryicon2.svg" },  // ✅ Dimmed with overlay
-              { image: "/cover3jewelry.png", name: "Accidental breakage or damage", description: "Accidental breakage or damage coverage ensures your valuable jewelry is protected against unexpected mishaps, such as dropping, chipping, or cracking, providing comprehensive peace of mind for high-net-worth collectors.", isDimmed: true, overlayImage:"/coverjewelryicon3.svg"  }
+              { image: "/Jewelrycover1.png", name: "Agreed Value", description: "This essential coverage pays for repair or replacement costs if your jewelry is lost, stolen, or damaged, ensuring peace of mind for your valuable items.", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
+              { image: "/Jewelrycover2.png", name: "Worldwide coverage", description: "This coverage protects items wherever they are located, whether at home, in transit, or on display (e.g., in galleries, museums, or private events).", isDimmed: true, overlayImage: "/coverjewelryicon2.svg" },  // ✅ Dimmed with overlay
+              { image: "/Jewelrycover3.png", name: "Accidental breakage or damage", description: "Accidental breakage or damage coverage ensures your valuable jewelry is protected against unexpected mishaps, such as dropping, chipping, or cracking, providing comprehensive peace of mind for high-net-worth collectors.", isDimmed: true, overlayImage:"/coverjewelryicon3.svg"  }
             ]
           },
         imageSection: { // ✅ Only Jewelry Insurance has this section
-          imageUrl:"/jewelrypic.png",
+          mediaUrl:"/Jewelrysection.png",
           altText: "Jewelry Insurance Banner"
         },
         splitSections: [ // ✅ Use an array to hold multiple SplitSections
             {
-              imageUrl: "/jewelryright.png",
+              imageUrl: "/jewelryrights.png",
               content: [
                 { title: "Mysterious disappearance", description: "Mysterious disappearance coverage protects your jewelry collection against unexplained loss, offering reassurance in situations where items vanish without a clear cause." },
                 { title: "Coverage for newly acquired Items", description: "Provides automatic, temporary coverage for newly purchased items until they are officially added to the policy." },
@@ -175,7 +171,7 @@ export type Service = {
               reverse: false, // Normal order
             },
             {
-              imageUrl: "/jewelryleft.png",
+              imageUrl: "/jewelrylefts.png",
               content: [
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out—we’re happy to help ensure your prized possessions are properly protected." },
           
@@ -192,37 +188,34 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Luxury Properties",
             description: "Personalized Protection for Your Valued Estates",
-            backgroundImage: "/realhero.png",
-            buttons: [
-              { text: "Get a Quote", variant: "default" },
-              { text: "Learn More", variant: "secondary" },
-            ],
+            backgroundImage: "/realstatehero.png",
+        
           },      
          whyUsContent: {
             title: "What We Cover",
             description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/cr1.png", name: "Rebuilding flexibility", description: "In the event of a fire or other loss that destroys your home, this coverage allows you to choose between rebuilding or receiving a cash settlement—putting the decision in your hands.", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
-              { image: "/cr2.png", name: "Guaranteed Home Replacement Cost", description: "This coverage ensures that your luxury home can be rebuilt to its original standard, even if the rebuilding costs exceed your policy limits, providing you with ultimate peace of mind.", isDimmed: true, overlayImage: "/coverjewelryicon2.svg" },  // ✅ Dimmed with overlay
-              { image: "/cr3.png", name: "Personal Liability", description: "Everyday life carries risks of accidents or allegations against you and your family. Personal liability coverage protects you from financial loss by covering defense costs and damages for accidental injury or property damage.", isDimmed: true, overlayImage:"/coverjewelryicon3.svg"  }
+              { image: "/realstatecover1.png", name: "Rebuilding flexibility", description: "In the event of a fire or other loss that destroys your home, this coverage allows you to choose between rebuilding or receiving a cash settlement—putting the decision in your hands.", isDimmed: true, overlayImage:"/real1.svg"  },
+              { image: "/realstatecover2.png", name: "Guaranteed Home Replacement Cost", description: "This coverage ensures that your luxury home can be rebuilt to its original standard, even if the rebuilding costs exceed your policy limits, providing you with ultimate peace of mind.", isDimmed: true, overlayImage: "/real2.svg" },  // ✅ Dimmed with overlay
+              { image: "/realstatecover3.png", name: "Personal Liability", description: "Everyday life carries risks of accidents or allegations against you and your family. Personal liability coverage protects you from financial loss by covering defense costs and damages for accidental injury or property damage.", isDimmed: true, overlayImage:"/real3.svg"  }
             ]
           },
           imageSection: { 
-          imageUrl:"/placeholder.png",
+            mediaUrl:"/realstatesection.png",
           altText: "Jewelry Insurance Banner"
           },
           splitSections: [
             {
               imageUrl: "/rightr.png",
               content: [
-                { title: "Mysterious disappearance", description: "Mysterious disappearance coverage protects your jewelry collection against unexplained loss, offering reassurance in situations where items vanish without a clear cause." },
-                { title: "Coverage for newly acquired Items", description: "Provides automatic, temporary coverage for newly purchased items until they are officially added to the policy." },
-                { title: "Coverage for transit & shipping", description: "Insures items while being transported, whether by air, sea, or specialized collection movers." }
+                { title: "Risk Consulting", description: "Risk consultants provide complimentary home appraisals to ensure your home and valuables are fully protected, while also offering guidance on security and fire prevention." },
+                { title: "Temporary Living Arrangements", description: "If a covered loss makes your home uninhabitable, this coverage will help you secure a comfortable temporary residence, whether it's a similar home in your school district or a suitable hotel." },
+                { title: "Cyber & Identity Theft", description: "Provides coverage for personal cyber risks, connected device vulnerabilities, and identity theft, ensuring protection against cyberattacks and compromised identities." }
               ],
               reverse: false, // Normal order
             },
             {
-              imageUrl: "/leftr.png",
+              imageUrl: "/realstateleft.png",
               content: [
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out—we’re happy to help ensure your prized possessions are properly protected." },
           
@@ -233,22 +226,22 @@ export type Service = {
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
             buttonText: "Get a Jewelry Quote",
-            backgroundImage: "/requestr.png",
+            backgroundImage: "/realstatecover.png",
           },  
           faqSection: { 
             title: "Jewelry Insurance FAQs",
             description: "Find answers to common questions about jewelry insurance coverage and claims.",
             faqs: [
-              { question: "What does jewelry insurance cover?", answer: "Jewelry insurance covers loss, theft, and accidental damage." },
-              { question: "How do I file a claim?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "Do I need an appraisal?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "How much does jewelry insurance cost?", answer: "Our rates vary based on the item’s value and your location." },
+              { question: "What is duPont REGISTRY insurance?", answer: "Jewelry insurance covers loss, theft, and accidental damage." },
+              { question: "What makes luxury home insurance different from standard homeowners insurance?", answer: "You can file a claim online through our easy-to-use portal." },
+              { question: "How is the value of my home determined for insurance purposes?", answer: "Yes, an appraisal is required for items valued over $5,000." },
+              { question: "What additional coverages are available for luxury homes?", answer: "Our rates vary based on the item’s value and your location." },
             ],
           },
           contactUsContent: { 
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
-            backgroundImage: "/footerrs.png",
+            backgroundImage: "/realstatefooter.png",
           },
         sections: []
       },
@@ -259,37 +252,34 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Aircraft Owners",
             description: "Personalized Protection for Your Aviation Investments",
-            backgroundImage: "/aviationhero.png",
-            buttons: [
-              { text: "Get a Quote", variant: "default" },
-              { text: "Learn More", variant: "secondary" },
-            ],
+            backgroundImage: "/aviationhero1.png",
+         
           },
 
           whyUsContent: {
             title: "What We Cover",
             description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/covera1.png", name: "Hull Coverage", description: "Protects the aircraft itself against physical damage from accidents, theft, or weather-related events, whether in the air or on the ground.", isDimmed: true, overlayImage:"/covera1icon.svg"  },
-              { image: "/covera2.png", name: "Liability Coverage", description: "Covers bodily injury or property damage caused to others while operating the aircraft, ensuring financial protection in case of lawsuits or claims.", isDimmed: true, overlayImage: "/covera2icon.svg" },  // ✅ Dimmed with overlay
-              { image: "/covera3.png", name: "Hangar Coverage", description: "Protects the hangar or storage facility you own or lease for your aircraft against physical damage, ensuring your storage space is covered in case of fire, theft, or other covered events.", isDimmed: true, overlayImage:"/covera3icon.svg"  }
+              { image: "/Aviationcover1.png", name: "Hull Coverage", description: "Protects the aircraft itself against physical damage from accidents, theft, or weather-related events, whether in the air or on the ground.", isDimmed: true, overlayImage:"/covera1icon.svg"  },
+              { image: "/Aviationcover2.png", name: "Liability Coverage", description: "Covers bodily injury or property damage caused to others while operating the aircraft, ensuring financial protection in case of lawsuits or claims.", isDimmed: true, overlayImage: "/covera2icon.svg" },  // ✅ Dimmed with overlay
+              { image: "/Aviationcover3.png", name: "Hangar Coverage", description: "Protects the hangar or storage facility you own or lease for your aircraft against physical damage, ensuring your storage space is covered in case of fire, theft, or other covered events.", isDimmed: true, overlayImage:"/covera3icon.svg"  }
             ]
           },
 
         imageSection: { // ✅ Only Jewelry Insurance has this section
-          imageUrl:"/aviationplace.png",
+          mediaUrl:"/Aviationsection.png",
           altText: "Jewelry Insurance Banner"
         },
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
           buttonText: "Get a Jewelry Quote",
-          backgroundImage: "/requestaviation.png",
+          backgroundImage: "/Aviationcover.png",
         },
 
         splitSections: [ // ✅ Use an array to hold multiple SplitSections
             {
-              imageUrl: "/righta.png",
+              imageUrl: "/Aviationright.png",
               content: [
                 { title: "Emergency Landing Coverage", description: "Covers costs associated with an unscheduled or emergency landing, including aircraft retrieval, towing, and damage to the landing site, ensuring you are protected during unexpected situations." },
                 { title: "Loss of Use Coverage", description: "Provides compensation for expenses or income lost due to the aircraft being out of service after a covered loss, helping to offset rental or alternative transportation costs." },
@@ -298,7 +288,7 @@ export type Service = {
               reverse: false, // Normal order
             },
             {
-              imageUrl: "/lefta.png",
+              imageUrl: "/Aviationleft.png",
               content: [
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out—we’re happy to help ensure your prized possessions are properly protected." },
           
@@ -311,59 +301,56 @@ export type Service = {
             title: "Jewelry Insurance FAQs",
             description: "Find answers to common questions about jewelry insurance coverage and claims.",
             faqs: [
-              { question: "What does jewelry insurance cover?", answer: "Jewelry insurance covers loss, theft, and accidental damage." },
-              { question: "How do I file a claim?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "Do I need an appraisal?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "How much does jewelry insurance cost?", answer: "Our rates vary based on the item’s value and your location." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "What does aviation insurance cover?", answer: "You can file a claim online through our easy-to-use portal." },
+              { question: "Do I need liability insurance if I only fly privately?", answer: "Yes, an appraisal is required for items valued over $5,000." },
+              { question: "How is the cost of aviation insurance determined?", answer: "Our rates vary based on the item’s value and your location." },
             ],
           },
 
           contactUsContent: { // ✅ Add contact section dynamically
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
-            backgroundImage: "/footeraviation.png",
+            backgroundImage: "/Aviationfooter.png",
           },
         sections: []
       },
 
       {
         id: "Marine",
-        name: "Marine",
+        name: "Yachts & Watercraft",
         backgroundImage: "/marine.png",
         heroSection: { 
             title: "Premium Insurance for Yachts & Watercraft",
             description: "Personalized Protection for Your Yachts and Watercraft",
-            backgroundImage: "/marinehero.png",
-            buttons: [
-              { text: "Get a Quote", variant: "default" },
-              { text: "Learn More", variant: "secondary" },
-            ],
+            backgroundImage: "/Yachtshero.png",
+          
           },
           
           whyUsContent: {
             title: "What We Cover",
-            description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
+            description: "By paying a premium, the insurer agrees to cover specific marine-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/marine1.png", name: "Agreed Value Coverage", description: "Provides full reimbursement based on the pre-determined value of your yacht/watercraft in the event of a total loss, with no depreciation applied..", isDimmed: true, overlayImage:"/marine1icon.svg"  },
-              { image: "/marine2.png", name: "Liability Protection", description: "Customized coverage limits to match your needs, including legal defense costs, liability under the Oil Pollution Act of 1990, wreck removal expenses, and Jones Act coverage for your paid crew.", isDimmed: true, overlayImage: "/marine2icon.svg" },  // ✅ Dimmed with overlay
-              { image: "/marine3.png", name: "Uninsured / Underinsured Boater Coverage", description: "Provides compensation for bodily injuries sustained by individuals on the insured yacht/watercraft when injured by another vessel's uninsured or underinsured owner or operator.", isDimmed: true, overlayImage:"/marine3icon.svg"  }
+              { image: "/Yachtscover1.png", name: "Agreed Value Coverage", description: "Provides full reimbursement based on the pre-determined value of your yacht/watercraft in the event of a total loss, with no depreciation applied..", isDimmed: true, overlayImage:"/marine1icon.svg"  },
+              { image: "/Yachtscover2.png", name: "Liability Protection", description: "Customized coverage limits to match your needs, including legal defense costs, liability under the Oil Pollution Act of 1990, wreck removal expenses, and Jones Act coverage for your paid crew.", isDimmed: true, overlayImage: "/marine2icon.svg" },  // ✅ Dimmed with overlay
+              { image: "/Yachtscover3.png", name: "Uninsured / Underinsured Boater Coverage", description: "Provides compensation for bodily injuries sustained by individuals on the insured yacht/watercraft when injured by another vessel's uninsured or underinsured owner or operator.", isDimmed: true, overlayImage:"/marine3icon.svg"  }
             ]
           },
 
         imageSection: { 
-          imageUrl:"/boat.png",
+          mediaUrl:"/Yachtssection.png",
           altText: "Jewelry Insurance Banner"
         },
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
           buttonText: "Get a Jewelry Quote",
-          backgroundImage: "/requestboat.png",
+          backgroundImage: "/Yachtscover.png",
         },
 
         splitSections: [ 
             {
-              imageUrl: "/marineright.png",
+              imageUrl: "/Yachtsright.png",
               content: [
                 { title: "Captain and Crew Coverage", description: "Extends liability protection to include the captain and crew members serving on the insured yacht." },
                 { title: "Precautionary Measures", description: "Covers reasonable expenses, up to the policy limit, for hauling, fueling, or docking the insured watercraft to protect it from an approaching covered peril, such as a hurricane." },
@@ -372,7 +359,7 @@ export type Service = {
               reverse: false, // Normal order
             },
             {
-              imageUrl: "/marineleft.png",
+              imageUrl: "/Yachtsleft.png",
               content: [
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out—we’re happy to help ensure your prized possessions are properly protected." },
           
@@ -385,17 +372,17 @@ export type Service = {
             title: "Jewelry Insurance FAQs",
             description: "Find answers to common questions about jewelry insurance coverage and claims.",
             faqs: [
-              { question: "What does jewelry insurance cover?", answer: "Jewelry insurance covers loss, theft, and accidental damage." },
-              { question: "How do I file a claim?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "Do I need an appraisal?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "How much does jewelry insurance cost?", answer: "Our rates vary based on the item’s value and your location." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "What does yacht and watercraft insurance cover?", answer: "You can file a claim online through our easy-to-use portal." },
+              { question: "How is the value of my yacht or watercraft determined for insurance?", answer: "Yes, an appraisal is required for items valued over $5,000." },
+              { question: "Does yacht insurance cover international waters and hurricane zones?", answer: "Our rates vary based on the item’s value and your location." },
             ],
           },
 
           contactUsContent: { // ✅ Add contact section dynamically
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
-            backgroundImage: "/marinefooter.png",
+            backgroundImage: "/Yachtsfooter.png",
           },
           sections: []
 
@@ -403,42 +390,39 @@ export type Service = {
 
       {
         id: "Wine",
-        name: "Wine and ",
+        name: "Wine and Spirits ",
         backgroundImage: "/wine.png",
         heroSection: { 
             title: "Premium Insurance for Wine and Spirits",
             description: "Personalized Protection for Your Wine and Spirits",
-            backgroundImage: "/winehero.png",
-            buttons: [
-              { text: "Get a Quote", variant: "default" },
-              { text: "Learn More", variant: "secondary" },
-            ],
+            backgroundImage: "/spiritshero.png",
+           
           },
           
           whyUsContent: {
             title: "What We Cover",
-            description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
+            description: "By paying a premium, the insurer agrees to cover specific personal goods-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/wine1.png", name: "Broad Coverage for Loss or Damage", description: "Protects your wine collection against risks such as fire, theft, breakage, vandalism, and temperature-related damage due to mechanical failure (e.g., wine cellar cooling system malfunctions).", isDimmed: true, overlayImage:"/wineicon1.svg"  },
-              { image: "/wine2.png", name: "Worldwide Coverage", description: "Ensures your wine collection is protected whether stored at home, in a secondary residence, or in transit (e.g., shipping or moving between locations).", isDimmed: true, overlayImage: "/wineicon2.svg" },  // ✅ Dimmed with overlay
-              { image: "/wine3.png", name: "Spoilage Coverage", description: "Covers spoilage caused by power outages, refrigeration failures, or climate control system malfunctions that result in temperature changes.", isDimmed: true, overlayImage:"/wineicon3.svg"  }
+              { image: "/spiritscover1.png", name: "Broad Coverage for Loss or Damage", description: "Protects your wine collection against risks such as fire, theft, breakage, vandalism, and temperature-related damage due to mechanical failure (e.g., wine cellar cooling system malfunctions).", isDimmed: true, overlayImage:"/wineicon1.svg"  },
+              { image: "/spiritscover2.png", name: "Worldwide Coverage", description: "Ensures your wine collection is protected whether stored at home, in a secondary residence, or in transit (e.g., shipping or moving between locations).", isDimmed: true, overlayImage: "/wineicon2.svg" },  // ✅ Dimmed with overlay
+              { image: "/spiritscover3.png", name: "Spoilage Coverage", description: "Covers spoilage caused by power outages, refrigeration failures, or climate control system malfunctions that result in temperature changes.", isDimmed: true, overlayImage:"/wineicon3.svg"  }
             ]
           },
 
         imageSection: { 
-          imageUrl:"/winevideo.png",
+          mediaUrl:"/spiritssection.png",
           altText: "Jewelry Insurance Banner"
         },
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
           buttonText: "Get a Jewelry Quote",
-          backgroundImage: "/winerequest.png",
+          backgroundImage: "/spiritscover.png",
         },
 
         splitSections: [ 
             {
-              imageUrl: "/wineright.png",
+              imageUrl: "/spiritsright.png",
               content: [
                 { title: "All-Risk Coverage", description: "Protects art collections from risks like fire, theft, accidental damage, and natural disasters" },
                 { title: "Breakage Protection", description: "Covers accidental breakage, particularly for fragile sculptures or glass pieces." },
@@ -447,7 +431,7 @@ export type Service = {
               reverse: false, // Normal order
             },
             {
-              imageUrl: "/wineleft.png",
+              imageUrl: "/spiritsleft.png",
               content: [
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out—we’re happy to help ensure your prized possessions are properly protected." },
           
@@ -460,17 +444,17 @@ export type Service = {
             title: "Jewelry Insurance FAQs",
             description: "Find answers to common questions about jewelry insurance coverage and claims.",
             faqs: [
-              { question: "What does jewelry insurance cover?", answer: "Jewelry insurance covers loss, theft, and accidental damage." },
-              { question: "How do I file a claim?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "Do I need an appraisal?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "How much does jewelry insurance cost?", answer: "Our rates vary based on the item’s value and your location." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "What types of couture and high-value fashion items can be insured?", answer: "You can file a claim online through our easy-to-use portal." },
+              { question: "How is the value of my couture collection determined?", answer: "Yes, an appraisal is required for items valued over $5,000." },
+              { question: "Does insurance cover damage, theft, or loss while traveling?", answer: "Our rates vary based on the item’s value and your location." },
             ],
           },
 
           contactUsContent: { // ✅ Add contact section dynamically
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
-            backgroundImage: "/winefooter.png",
+            backgroundImage: "/spiritsfooter.png",
           },
           sections: []
 

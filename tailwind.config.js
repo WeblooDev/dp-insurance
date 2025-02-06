@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ["var(--font-inter)"],
-        ivar: ["IvarTextHydro"],
+        ivar: ["Ivar Display Hydro", "sans-serif"],
       },
       screens: {
         "xl-custom": "1200px", // Define a custom breakpoint at 1200px

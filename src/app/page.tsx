@@ -2,13 +2,13 @@
 import { getServices } from "@/data/service";
 import Request from "./sections/Request";
 import WhyUs from './sections/whyUs';
-import ImageSection from './sections/ImageSection';
 import SplitSection from "./sections/SplitSection";
 import ContactUs from './sections/ContactUs';
 import ServiceCard from "./sections/Template";
 import FAQSection from './sections/FaqSection';
 import HeroCarousel from "./sections/Hero";
 import LineCall from './sections/LineCall';
+import MediaSection from "./sections/ImageSection";
 
 export default async function Home() {
   const services = await getServices();
@@ -23,9 +23,9 @@ export default async function Home() {
 
         <section className="w-full mx-auto px-4 sm:px-12 py-12">
         <div className="title flex self-center  justify-center pb-12 text-5xl ">
-            <h1>What we Cover</h1>
+            <h1 className="font-ivar text-[40px] tracking-tight ">What we Cover</h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 lg:gap-8">
         {services.map((service, index) => (
             <ServiceCard
               key={service.id}
@@ -43,7 +43,7 @@ export default async function Home() {
          title="Need Premium Insurance for Unique Needs?" />
          
 
-      <ImageSection imageUrl="/formula.png" altText="Main Page Banner" />
+         <MediaSection mediaUrl="/mainlanding.mp4" altText="Main Page Banner" />
 
       
       <WhyUs
@@ -79,7 +79,7 @@ export default async function Home() {
 
 
         <SplitSection
-            imageUrl="/manage.png"
+            imageUrl="/heroSplit-right.png"
             content={[
             { title: "Bespoke Policies", description: "Every asset is unique—your insurance should be too. Our custom policies provide precise coverage for your luxury lifestyle." },
             { title: "Effortless Claims", description: "When the unexpected happens, we make it right. Our streamlined claims process ensures fast, hassle-free resolutions." },

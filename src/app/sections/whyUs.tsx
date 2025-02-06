@@ -47,14 +47,14 @@ export default function WhyUs({ title, description, services }: WhyUsProps) {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-12 md:mb-16 space-y-4"
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{title}</h2>
-          <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            {description}
+        <h2 className="font-ivar text-[32px] md:text-[40px]">{title}</h2>
+        <p className="text-[16px] w-full md:text-[18px] md:max-w-[900px] mx-auto">
+        {description}
           </p>
         </motion.div>
 
         {/* Three Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -79,9 +79,9 @@ export default function WhyUs({ title, description, services }: WhyUsProps) {
                   />
                 )}
               </div>
-              <h3 className="text-2xl font-bold text-center">{service.name}</h3>
+              <h3 className="font-ivar text-[24px] md:text-[28px] text-center">{service.name}</h3>
               <div className="w-[50%] h-0.5 bg-[black] rounded-full" />
-              <p className="text-center text-muted-foreground">{service.description}</p>
+              <p className="text-center text-[16px] md:text-[18px]">{service.description}</p>
             </motion.div>
           ))}
         </div>

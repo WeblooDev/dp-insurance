@@ -48,7 +48,7 @@ export default function ServiceCard({ id, name, imageUrl, index }: ServiceCardPr
             style={{ backgroundImage: `url(${imageUrl})` }}
           />
           <div className="absolute inset-0 p-6 flex flex-col justify-end">
-            <h3 className="text-2xl font-bold text-white mb-2">{name}</h3>
+            <h3 className="font-ivar mb-4 text-[32px]  text-white ">{name}</h3>
             <span className="text-white underline">Learn More</span>
           </div>
         </Card>
