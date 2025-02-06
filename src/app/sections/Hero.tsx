@@ -47,7 +47,7 @@ export default function HeroStatic() {
       </h2>
 
 
-          <p className="mb-8 text-[20px] text-gray-200 max-w-[70%] ">
+          <p className="mb-8 text-[20px] text-white max-w-[70%] ">
           Protect your luxury cars, jewelry, properties, yachts, and more with insurance designed for those who expect the best.
           </p>
         </div>

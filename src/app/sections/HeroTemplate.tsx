@@ -30,7 +30,7 @@ export default function HeroTemplate({ title, description, backgroundImage, show
       
           <div className="flex flex-col items-center justify-center">
           <h2 className="font-ivar mb-4 text-[40px] md:text-[50px] text-white">{title}</h2>
-          <p className="mb-8 text-[20px] text-gray-200 max-w-[70%]">{description}</p>
+          <p className="mb-8 text-[20px] text-white max-w-[70%]">{description}</p>
           </div>
 
           {showButtons && (
