@@ -29,18 +29,19 @@ export default function SplitSection({ imageUrl, content, reverse = false }: Spl
           </div>
         </div>
 
-        <div className="w-full xl-custom:w-[50%] h-[50%]">
-        <Image
-          alt="Split section image"
-          src={imageUrl}
-          width={600}
-          height={600}
-          className={`aspect-square w-full h-full max-h-[600px] object-center object-cover 
-            rounded-none md:${reverse ? "rounded-tr-[40px]" : "rounded-tl-[40px]"}`}
+            <div className="w-full xl-custom:w-[50%] h-[50%]">
+            <Image
+  alt="Split section image"
+  src={imageUrl}
+  width={600}
+  height={600}
+  className={`aspect-square w-full h-full max-h-[600px] object-center object-cover 
+    rounded-none ${reverse ? "!rounded-tr-[40px]" : "!rounded-tl-[40px]"}`}
 />
 
 
-        </div>
+
+            </div>
       </div>
     </section>
   );

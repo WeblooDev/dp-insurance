@@ -157,12 +157,12 @@ export type Service = {
             ]
           },
         imageSection: { // ✅ Only Jewelry Insurance has this section
-          mediaUrl:"/Jewelrysection.png",
+          mediaUrl:"/Jewelrysection1.png",
           altText: "Jewelry Insurance Banner"
         },
         splitSections: [ // ✅ Use an array to hold multiple SplitSections
             {
-              imageUrl: "/jewelryrights.png",
+              imageUrl: "/jewelryrightsspecial.png",
               content: [
                 { title: "Mysterious disappearance", description: "Mysterious disappearance coverage protects your jewelry collection against unexplained loss, offering reassurance in situations where items vanish without a clear cause." },
                 { title: "Coverage for newly acquired Items", description: "Provides automatic, temporary coverage for newly purchased items until they are officially added to the policy." },
@@ -252,7 +252,7 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Aircraft Owners",
             description: "Personalized Protection for Your Aviation Investments",
-            backgroundImage: "/aviationhero1.png",
+            backgroundImage: "/Aviationherospecial.png",
          
           },
 
