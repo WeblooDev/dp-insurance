@@ -123,7 +123,7 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Fine Jewelry and Collectibles",
             description: "Personalized Protection for Your Treasured Collection",
-            backgroundImage: "/Jewelryhero.png",
+            backgroundImage: "/Jewelryherospecial.png",
 
           },
           contactUsContent: { // ✅ Add contact section dynamically
