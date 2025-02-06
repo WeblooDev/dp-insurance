@@ -89,12 +89,13 @@ export default async function Home() {
 
         <FAQSection
                 title="Frequently Asked Questions"
-                description="Got questions? We've got answers. If you can't find what you're looking for, feel free to contact our support team."
+                description="Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy."
                 faqs={[
-                { question: "How do I get started?", answer: "Getting started is easy! Sign up, complete your profile, and start exploring." },
-                { question: "What payment methods do you accept?", answer: "We accept Visa, MasterCard, PayPal, and bank transfers." },
-                { question: "Can I cancel my subscription anytime?", answer: "Yes, you can cancel anytime. No contracts or cancellation fees." },
-                { question: "Is there a mobile app available?", answer: "Yes, we have mobile apps for iOS and Android." },
+                { question: "What is duPont REGISTRY insurance?", answer: "duPont Registry Insurance is a specialized insurance program designed to protect high-value assets, including luxury homes, exotic cars, yachts, private aircraft, fine art, and collectibles. Our program is tailored for individuals who require premium coverage with concierge-level service. Whether you own a single high-value asset or a diverse collection, we provide customized insurance solutions to meet your unique needs." },
+                
+                { question: "What makes duPont Registry Insurance different from standard insurance providers?", answer: "Unlike traditional insurers, duPont REGISTRY Insurance partners with top-tier carriers specializing in high-net-worth coverage. Our policies offer: Agreed Value Coverage to ensure full payouts without depreciation. Worldwide Protection for assets like luxury homes and vehicles, couture collections, and fine art. Concierge Claims Service for a seamless, white-glove experience. Customizable Coverage designed for rare, collectible, and one-of-a-kind assets." },
+                { question: "How do I get a quote for my luxury assets?", answer: "Getting a quote is simple: Click the Get a Quote button on this page. 2. Our team will connect you with a high-net-worth insurance specialist to tailor a policy to your needs." },
+               
                 ]}
         />
 
@@ -109,4 +110,4 @@ export default async function Home() {
 
     </main>
   );
-}
+};

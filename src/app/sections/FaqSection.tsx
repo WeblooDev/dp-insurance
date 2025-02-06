@@ -16,7 +16,7 @@ export default function FAQSection({ title, description, faqs }: FAQSectionProps
     <section className="py-6 md:py-16">
       <div className="px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h1 className="font-ivar text-[30px] md:text-[40px]]">{title}</h1>
+          <h1 className="font-ivar text-[40px] md:text-[40px]]">{title}</h1>
           <p className="mx-auto max-w-[700px] text-[16px] md:text-[18px] ">
             {description}
           </p>
@@ -35,7 +35,7 @@ export default function FAQSection({ title, description, faqs }: FAQSectionProps
         <span className=" text-left text-[18px] ">{index + 1}. {faq.question}</span>
       </AccordionTrigger>
 
-      <AccordionContent className="text-base md:text-lg py-10 pt-0 lg:text-xl">
+      <AccordionContent className="text-base text-[18px] py-10 pt-0 ">
         {faq.answer}
       </AccordionContent>
     </AccordionItem>

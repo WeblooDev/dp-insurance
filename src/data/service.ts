@@ -52,7 +52,7 @@ export type Service = {
     return [
       {
         id: "automotive",
-        name: "Automotive Insurance",
+        name: "Automotive ",
         backgroundImage: "/automotive.png",
         heroSection: { 
             title: "Quality Insurance for Luxury Cars",
@@ -61,7 +61,7 @@ export type Service = {
             showButtons: true, 
           
           },
-          contactUsContent: { // ✅ Add contact section dynamically
+          contactUsContent: { 
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
             backgroundImage: "/automotivefooter.png",
@@ -71,14 +71,23 @@ export type Service = {
             buttonText: "Get a Jewelry Quote",
             backgroundImage: "/automotiveferrari.png",
           },
-        faqSection: { // ✅ Only Jewelry Insurance has this section
-            title: "Jewelry Insurance FAQs",
-            description: "Find answers to common questions about jewelry insurance coverage and claims.",
+        faqSection: { 
+            title: "Frequently Asked Questions",
+            description: "Not sure duPont is right for you? Here’s what you should know about us before you sign up for a policy.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
-              { question: "How do I file a claim?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "Do I need an appraisal?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "How much does jewelry insurance cost?", answer: "Our rates vary based on the item’s value and your location." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "How much are deductibles for luxury sports cars and other expensive vehicles?", answer: "In contrast to plans sold by generic insurance providers, insurance plans sold by duPont REGISTRY Insurance offer a zero deductible for most vehicles, including the best luxury cars around. Other deductible options are available and vary by state and vehicle type. Any applicable deductibles will be available during the online quoting process." },
+              { question: "How many years of driving experience are required to be eligible for exotic car coverage?", answer: "Since luxury vehicles are typically more costly to repair, special driver conditions apply. Every driver must be fully licensed with no state-imposed restrictions (such as a suspension). Operators of motorcycles and high-performance vehicles must be licensed for a minimum of 10 years to be eligible for coverage." },
+              { question: "Who can drive my car?", answer: "As long as a driver meets the acceptable usage guidelines mentioned above, it's up to your discretion who you allow to take your Ferrari or Porsche for a drive. Have questions? Contact our concierge team to discuss your specific situation." },
+
+
+              { question: "Is it more expensive to insure the most expensive cars?", answer: "Many factors contribute to monthly insurance premiums for the best luxury cars, but it's not nearly as expensive as most collectors anticipate. Luxury car insurance rates depend on factors like your vehicle's value, location, storage, and usage. Keeping your car in a secure location, such as a locked garage, is favorable to insurers. Discounts may also be available, such as good driver discounts and multi-car discounts." },
+              { question: "What are the requirements for luxury car insurance?", answer: "Eligibility for luxury car insurance varies by insurer, regardless of whether you drive a luxury sports car, a luxury SUV, or the latest luxury electric car. Factors typically include limited usage, preferred storage conditions, and driver eligibility. In most states, drivers seeking luxury car insurance should have a clean driving record without serious infractions in the past three years. Luxury car insurers may also require ownership of a regular-use vehicle for daily driving." },
+              { question: "Do expensive cars require an appraisal to confirm their value?", answer: "Typically, appraisals are not required. We will contact you during the underwriting process if we need further documentation supporting a vehicle's value, but this is uncommon." },
+              { question: "Can I insure other types of high-end vehicles under my car insurance?", answer: "We provide coverage for various luxury vehicle types, including vintage motorcycles, military vehicles, sports vehicles, and more." },
+
+              { question: "Is luxury car insurance more expensive than regular auto insurance?", answer: "Not necessarily. In many cases, luxury car insurance is more affordable than standard auto insurance. This is because luxury car owners typically drive their collectible vehicles less frequently, reducing the likelihood of accidents." },
+              { question: "What if I'm not sure what option is best for me?", answer: "That's what we're here for. Contact our concierge team to narrow down your options and find the right insurance plan for you." },
             ],
           },
         
@@ -118,15 +127,16 @@ export type Service = {
       },
       {
         id: "jewelry",
-        name: "Jewelry Insurance",
+        name: "Jewelry and Collectibles ",
         backgroundImage: "/jewelry.png",
         heroSection: { 
             title: "Premium Insurance for Fine Jewelry and Collectibles",
             description: "Personalized Protection for Your Treasured Collection",
             backgroundImage: "/Jewelryherospecial.png",
 
+
           },
-          contactUsContent: { // ✅ Add contact section dynamically
+          contactUsContent: { 
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
             backgroundImage: "/Jewelryrolex.png",
@@ -136,14 +146,14 @@ export type Service = {
             buttonText: "Get a Jewelry Quote",
             backgroundImage: "/Jewelryhand.png",
           },
-        faqSection: { // ✅ Only Jewelry Insurance has this section
+        faqSection: { 
             title: "Jewelry Insurance FAQs",
             description: "Find answers to common questions about jewelry insurance coverage and claims.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
-              { question: "How do I file a claim?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "Do I need an appraisal?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "How much does jewelry insurance cost?", answer: "Our rates vary based on the item’s value and your location." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "How are the values of my Collectibles determined? (jewelry, fine arts, wine, etc.)", answer: "For high-value or rare pieces, we recommend professional appraisals to ensure accurate coverage. If you have recent purchase receipts, auction results, or third-party valuations, we can use them to help determine the proper insurance amount. Our goal is to protect your collection at its true worth, so you can have peace of mind knowing it’s covered in case of loss, theft, or damage." },
+              { question: "What types of Collectibles can be insured?", answer: "At duPont Registry Insurance, we offer comprehensive coverage for a wide range of valuable collections. Our policies can protect items such as: Jewelry: From individual pieces to extensive collections, your jewelry is safeguarded against various risks. Fine Art: Including paintings, sculptures, and artifacts, we ensure your art pieces are covered. Wine and Spirits: Whether you have a few rare bottles or a vast cellar, our coverage protects your collection. Designer Couture and Handbags: High-value fashion items, such as designer clothing and handbags, are also insurable under our policies. Additionally, we provide coverage for other collectibles, including: Antiques, Sports, Memorabilia, Musical, Instruments, Rare Books, Stamps and Coins. Our goal is to offer tailored insurance solutions that meet the unique needs of collectors, ensuring your treasured items are protected." },
+              { question: "Are pictures and appraisals required?", answer: "Documentation requirements vary depending on the value of your collectibles. For high-value items, insurers may require appraisals, receipts, or photographs to establish accurate coverage. While lower-value pieces may not always need documentation, providing pictures and purchase records is highly recommended. This helps streamline the claims process and ensures your items are insured at their true worth. Each policy is tailored to your collection, so we can guide you on the best documentation practices for comprehensive protection." },
             ],
           },
         
@@ -189,6 +199,7 @@ export type Service = {
             title: "Premium Insurance for Luxury Properties",
             description: "Personalized Protection for Your Valued Estates",
             backgroundImage: "/realstatehero.png",
+
         
           },      
          whyUsContent: {
@@ -232,10 +243,10 @@ export type Service = {
             title: "Jewelry Insurance FAQs",
             description: "Find answers to common questions about jewelry insurance coverage and claims.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance?", answer: "Jewelry insurance covers loss, theft, and accidental damage." },
-              { question: "What makes luxury home insurance different from standard homeowners insurance?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "How is the value of my home determined for insurance purposes?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "What additional coverages are available for luxury homes?", answer: "Our rates vary based on the item’s value and your location." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "What makes luxury home insurance different from standard homeowners insurance?", answer: "Luxury home insurance is designed to provide broader and more customizable coverage for high-value properties. It accounts for the unique features of luxury homes, such as high-end materials, custom architecture, fine art collections, and additional structures like guest houses or private pools. Unlike standard policies, luxury home insurance often includes extended replacement cost coverage, cash settlement options, and protection against risks like water damage, cyber threats, and identity theft." },
+              { question: "How is the value of my home determined for insurance purposes?", answer: "Insurance carriers use a combination of expert appraisals, market data, and specialized cost estimators to determine the true replacement value of your home. This includes high-end finishes, custom craftsmanship, and any unique architectural details. Unlike market value, which fluctuates based on real estate trends, your home’s insured value is based on the cost to rebuild it to its original specifications with similar quality materials." },
+              { question: "What additional coverages are available for luxury homes?", answer: "Luxury home insurance policies offer enhanced protection beyond standard homeowners insurance, including: Extended Replacement Cost: Covers rebuilding costs, even if they exceed policy limits. High-Value Personal Property: Coverage for fine art, jewelry, wine collections, and more. Private Staff & Liability: Protection for household employees, such as nannies or estate managers. Cyber & Identity Theft Protection: Safeguards against cyberattacks and fraud. Water & Sewer Backup Coverage: Covers damage from sump pump failure, or water/sewer backups." },
             ],
           },
           contactUsContent: { 
@@ -253,6 +264,8 @@ export type Service = {
             title: "Premium Insurance for Aircraft Owners",
             description: "Personalized Protection for Your Aviation Investments",
             backgroundImage: "/Aviationherospecial.png",
+            showButtons: true, 
+
          
           },
 
@@ -298,13 +311,13 @@ export type Service = {
           ],
 
           faqSection: { // ✅ Only Jewelry Insurance has this section
-            title: "Jewelry Insurance FAQs",
-            description: "Find answers to common questions about jewelry insurance coverage and claims.",
+            title: "Frequently Asked Questions",
+            description: "Not sure duPont is right for you? Here’s what you should know about us before you sign up for a policy.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
-              { question: "What does aviation insurance cover?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "Do I need liability insurance if I only fly privately?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "How is the cost of aviation insurance determined?", answer: "Our rates vary based on the item’s value and your location." },
+              { question: "What is duPont REGISTRY insurance?", answer: "Aviation insurance provides coverage for aircraft owners, operators, and pilots against risks such as physical damage to the aircraft, liability for passenger injuries, and third-party property damage. Policies can also include coverage for hangars, ground equipment, and loss of use. Coverage options vary based on the type of aircraft, usage (private, corporate, or commercial), and specific policy needs." },
+              { question: "What does aviation insurance cover?", answer: "YLuxury home insurance is designed to provide broader and more customizable coverage for high-value properties. It accounts for the unique features of luxury homes, such as high-end materials, custom architecture, fine art collections, and additional structures like guest houses or private pools. Unlike standard policies, luxury home insurance often includes extended replacement cost coverage, cash settlement options, and protection against risks like water damage, cyber threats, and identity theft." },
+              { question: "Do I need liability insurance if I only fly privately?", answer: "Yes, liability insurance is essential even for private aircraft owners. It protects you against claims for bodily injury, property damage, or legal expenses if an accident occurs. Without liability coverage, you could be personally responsible for significant financial losses. Many policies also include guest passenger liability to cover anyone onboard." },
+              { question: "How is the cost of aviation insurance determined?", answer: "Premiums are based on several factors, including the type of aircraft, its value, intended use (personal, business, or commercial), pilot experience, and safety records. Other considerations include storage location, flight hours, and any additional liability or coverage options selected. Working with an experienced aviation insurance provider ensures that you get a policy tailored to your specific needs." },
             ],
           },
 
@@ -315,7 +328,6 @@ export type Service = {
           },
         sections: []
       },
-
       {
         id: "Marine",
         name: "Yachts & Watercraft",
@@ -324,6 +336,8 @@ export type Service = {
             title: "Premium Insurance for Yachts & Watercraft",
             description: "Personalized Protection for Your Yachts and Watercraft",
             backgroundImage: "/Yachtshero.png",
+            showButtons: true, 
+
           
           },
           
@@ -368,14 +382,15 @@ export type Service = {
             }
           ],
 
-          faqSection: { // ✅ Only Jewelry Insurance has this section
-            title: "Jewelry Insurance FAQs",
-            description: "Find answers to common questions about jewelry insurance coverage and claims.",
+          faqSection: { 
+            title: "Frequently Asked Questions",
+            description: "Not sure duPont is right for you? Here’s what you should know about us before you sign up for a policy.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
-              { question: "What does yacht and watercraft insurance cover?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "How is the value of my yacht or watercraft determined for insurance?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "Does yacht insurance cover international waters and hurricane zones?", answer: "Our rates vary based on the item’s value and your location." },
+
+             { question: "What is duPont REGISTRY insurance?", answer: "Aviation insurance provides coverage for aircraft owners, operators, and pilots against risks such as physical damage to the aircraft, liability for passenger injuries, and third-party property damage. Policies can also include coverage for hangars, ground equipment, and loss of use. Coverage options vary based on the type of aircraft, usage (private, corporate, or commercial), and specific policy needs." },
+              { question: "What does yacht and watercraft insurance cover?", answer: "Yacht and watercraft insurance provides coverage for physical damage to your vessel, liability protection, and additional risks such as theft, weather-related damage, and pollution liability. Policies can also include protection for crew members, onboard personal property, towing assistance, and uninsured boaters. Coverage varies depending on the type, size, and usage of the vessel." },
+              { question: "How is the value of my yacht or watercraft determined for insurance?", answer: "The insured value of your yacht or boat is typically based on its agreed value or purchase price." },
+              { question: "Does yacht insurance cover international waters and hurricane zones?", answer: "Coverage varies depending on your policy and navigation limits. Some policies provide worldwide coverage, while others have specific navigational limits that restrict where you can operate your vessel. If you sail in hurricane-prone areas, you may need to follow storm preparedness plans to maintain coverage during hurricane season. Additional endorsements can be added for expanded cruising areas and year-round protection." },
             ],
           },
 
@@ -387,7 +402,6 @@ export type Service = {
           sections: []
 
       },
-
       {
         id: "Wine",
         name: "Wine and Spirits ",
@@ -395,7 +409,9 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Wine and Spirits",
             description: "Personalized Protection for Your Wine and Spirits",
-            backgroundImage: "/spiritshero.png",
+            backgroundImage: "/spiritshero1.png",
+            showButtons: true, 
+
            
           },
           
@@ -441,13 +457,13 @@ export type Service = {
           ],
 
           faqSection: { // ✅ Only Jewelry Insurance has this section
-            title: "Jewelry Insurance FAQs",
-            description: "Find answers to common questions about jewelry insurance coverage and claims.",
+            title: "Frequently Asked Questions",
+            description: "Not sure duPont is right for you? Here’s what you should know about us before you sign up for a policy.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
-              { question: "What types of couture and high-value fashion items can be insured?", answer: "You can file a claim online through our easy-to-use portal." },
-              { question: "How is the value of my couture collection determined?", answer: "Yes, an appraisal is required for items valued over $5,000." },
-              { question: "Does insurance cover damage, theft, or loss while traveling?", answer: "Our rates vary based on the item’s value and your location." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "What types of couture and high-value fashion items can be insured?", answer: "Our policies cover a wide range of luxury fashion items, including: Designer clothing & couture collections (custom gowns, runway pieces, bespoke suits) Luxury handbags (Hermès, Chanel, Louis Vuitton, etc.) Rare & vintage fashion pieces High-end shoes & accessories (watches, belts, scarves, sunglasses) Fur & exotic leather goods Whether your collection is for personal use or investment, we ensure comprehensive protection." },
+              { question: "How is the value of my couture collection determined?", answer: "The insured value is typically based on purchase price, appraisal, or current market value. For rare and vintage pieces, we work with industry experts to assess their worth. " },
+              { question: " Does insurance cover damage, theft, or loss while traveling?", answer: "Yes, many couture insurance policies offer worldwide coverage, protecting your collection whether it's at home, in storage, or while traveling. " },
             ],
           },
 
