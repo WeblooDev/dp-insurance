@@ -59,7 +59,7 @@ export default function HeroStatic() {
             className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
           >
             <a href="mailto:info@example.com">
-              <img src="/emailicon.png" alt="Email Icon" />
+              <img src="/emailicon.svg" alt="Email Icon" />
               Email
             </a>
           </Button>
@@ -78,7 +78,7 @@ export default function HeroStatic() {
             className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
           >
             <a href="tel:+123456789">
-              <img src="/phonecall.png" alt="Phone Icon" />
+              <img src="/phonecall.svg" alt="Phone Icon" />
               1-833-738-7668            </a>
           </Button>
         </div>

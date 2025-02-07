@@ -68,12 +68,10 @@ export default async function Home() {
         ]}
       />
 
+
       <Request
         title="Request Your Exclusive Custom Insurance Quote"   
-        buttons={[
-          { text: "Get a Quote", variant: "primary" },
-    
-        ]}
+        buttonText="Get Quote"
         backgroundImage="/requestMainpage.png" // Ensure the image is in the `public/` folder
         />
 
@@ -103,7 +101,7 @@ export default async function Home() {
             title="Request Your Complimetay Quote"
             description="When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events."
             backgroundImage="/contact.png"
-           
+           showGetQuoteButton={true}
         />
 
     

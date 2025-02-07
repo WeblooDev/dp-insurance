@@ -32,6 +32,8 @@ export type Service = {
     title: string;
     description: string;
     backgroundImage: string;
+    showGetQuoteButton?: boolean; 
+
   };
   splitSections?: Array<{
     imageUrl: string;
@@ -42,7 +44,7 @@ export type Service = {
     title: string;
     description: string;
     backgroundImage: string;
-    showButtons?: boolean; // ✅ New field (false by default)
+    showButton?: boolean; // ✅ New field (false by default)
   };
 };
 
@@ -58,17 +60,19 @@ export type Service = {
             title: "Quality Insurance for Luxury Cars",
             description: "Personalized Protection for Your Prized Vehicles",
             backgroundImage: "/automotiveHero.png",
-            showButtons: true, 
+            showButton: true, 
           
           },
           contactUsContent: { 
             title: "Request Your Complimentary Quote",
-            description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
+            description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/automotivefooter.png",
+            showGetQuoteButton: true, // ✅ Set to true to display the "Get Quote" button
+
           },
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
-            buttonText: "Get a Jewelry Quote",
+            buttonText: "Get Quote", // ✅ Will render "Get a Quote" button
             backgroundImage: "/automotiveferrari.png",
           },
         faqSection: { 
@@ -138,17 +142,19 @@ export type Service = {
           },
           contactUsContent: { 
             title: "Request Your Complimentary Quote",
-            description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
+            description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/Jewelryrolex.png",
+            showGetQuoteButton: false, // ✅ Set to true to display the "Get Quote" button
+
           },
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
-            buttonText: "Get a Jewelry Quote",
+            buttonText: "Email", // ✅ Will render the Email button
             backgroundImage: "/Jewelryhand.png",
           },
         faqSection: { 
-            title: "Jewelry Insurance FAQs",
-            description: "Find answers to common questions about jewelry insurance coverage and claims.",
+            title: "Frequently Asked Questions",
+            description: "Not sure duPont is right for you? Here’s what you should know about us before you sign up for a policy.",
             faqs: [
               { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
               { question: "How are the values of my Collectibles determined? (jewelry, fine arts, wine, etc.)", answer: "For high-value or rare pieces, we recommend professional appraisals to ensure accurate coverage. If you have recent purchase receipts, auction results, or third-party valuations, we can use them to help determine the proper insurance amount. Our goal is to protect your collection at its true worth, so you can have peace of mind knowing it’s covered in case of loss, theft, or damage." },
@@ -204,7 +210,7 @@ export type Service = {
           },      
          whyUsContent: {
             title: "What We Cover",
-            description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
+            description: "By paying a premium, the insurer agrees to cover specific real estate-related losses as outlined in your policy. This coverage typically includes:",
             services: [
               { image: "/realstatecover1.png", name: "Rebuilding flexibility", description: "In the event of a fire or other loss that destroys your home, this coverage allows you to choose between rebuilding or receiving a cash settlement—putting the decision in your hands.", isDimmed: true, overlayImage:"/real1.svg"  },
               { image: "/realstatecover2.png", name: "Guaranteed Home Replacement Cost", description: "This coverage ensures that your luxury home can be rebuilt to its original standard, even if the rebuilding costs exceed your policy limits, providing you with ultimate peace of mind.", isDimmed: true, overlayImage: "/real2.svg" },  // ✅ Dimmed with overlay
@@ -236,12 +242,12 @@ export type Service = {
           ],
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
-            buttonText: "Get a Jewelry Quote",
+            buttonText: "Email", // ✅ Will render the Email button
             backgroundImage: "/realstatecover.png",
           },  
           faqSection: { 
-            title: "Jewelry Insurance FAQs",
-            description: "Find answers to common questions about jewelry insurance coverage and claims.",
+            title: "Frequently Asked Questions",
+            description: "Not sure duPont is right for you? Here’s what you should know about us before you sign up for a policy.",
             faqs: [
               { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
               { question: "What makes luxury home insurance different from standard homeowners insurance?", answer: "Luxury home insurance is designed to provide broader and more customizable coverage for high-value properties. It accounts for the unique features of luxury homes, such as high-end materials, custom architecture, fine art collections, and additional structures like guest houses or private pools. Unlike standard policies, luxury home insurance often includes extended replacement cost coverage, cash settlement options, and protection against risks like water damage, cyber threats, and identity theft." },
@@ -251,8 +257,10 @@ export type Service = {
           },
           contactUsContent: { 
             title: "Request Your Complimentary Quote",
-            description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
+            description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/realstatefooter.png",
+            showGetQuoteButton: false, // ✅ Set to true to display the "Get Quote" button
+
           },
         sections: []
       },
@@ -264,14 +272,13 @@ export type Service = {
             title: "Premium Insurance for Aircraft Owners",
             description: "Personalized Protection for Your Aviation Investments",
             backgroundImage: "/Aviationherospecial.png",
-            showButtons: true, 
 
          
           },
 
           whyUsContent: {
             title: "What We Cover",
-            description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
+            description: "By paying a premium, the insurer agrees to cover specific real aviation losses as outlined in your policy. This coverage typically includes:",
             services: [
               { image: "/Aviationcover1.png", name: "Hull Coverage", description: "Protects the aircraft itself against physical damage from accidents, theft, or weather-related events, whether in the air or on the ground.", isDimmed: true, overlayImage:"/covera1icon.svg"  },
               { image: "/Aviationcover2.png", name: "Liability Coverage", description: "Covers bodily injury or property damage caused to others while operating the aircraft, ensuring financial protection in case of lawsuits or claims.", isDimmed: true, overlayImage: "/covera2icon.svg" },  // ✅ Dimmed with overlay
@@ -286,7 +293,7 @@ export type Service = {
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
-          buttonText: "Get a Jewelry Quote",
+          buttonText: "Email", // ✅ Will render the Email button
           backgroundImage: "/Aviationcover.png",
         },
 
@@ -323,7 +330,7 @@ export type Service = {
 
           contactUsContent: { // ✅ Add contact section dynamically
             title: "Request Your Complimentary Quote",
-            description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
+            description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/Aviationfooter.png",
           },
         sections: []
@@ -336,7 +343,6 @@ export type Service = {
             title: "Premium Insurance for Yachts & Watercraft",
             description: "Personalized Protection for Your Yachts and Watercraft",
             backgroundImage: "/Yachtshero.png",
-            showButtons: true, 
 
           
           },
@@ -347,7 +353,7 @@ export type Service = {
             services: [
               { image: "/Yachtscover1.png", name: "Agreed Value Coverage", description: "Provides full reimbursement based on the pre-determined value of your yacht/watercraft in the event of a total loss, with no depreciation applied..", isDimmed: true, overlayImage:"/marine1icon.svg"  },
               { image: "/Yachtscover2.png", name: "Liability Protection", description: "Customized coverage limits to match your needs, including legal defense costs, liability under the Oil Pollution Act of 1990, wreck removal expenses, and Jones Act coverage for your paid crew.", isDimmed: true, overlayImage: "/marine2icon.svg" },  // ✅ Dimmed with overlay
-              { image: "/Yachtscover3.png", name: "Uninsured / Underinsured Boater Coverage", description: "Provides compensation for bodily injuries sustained by individuals on the insured yacht/watercraft when injured by another vessel's uninsured or underinsured owner or operator.", isDimmed: true, overlayImage:"/marine3icon.svg"  }
+              { image: "/Yachtscover3.png", name: "Uninsured / Underinsured Boater Coverage", description: "Provides compensation for bodily injuries sustained by individuals on the insured yacht/watercraft when injured by another vessel's uninsured or underinsured owner or operator.", isDimmed: true, overlayImage:"/time.svg"  }
             ]
           },
 
@@ -358,7 +364,7 @@ export type Service = {
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
-          buttonText: "Get a Jewelry Quote",
+          buttonText: "Email", // ✅ Will render the Email button
           backgroundImage: "/Yachtscover.png",
         },
 
@@ -396,7 +402,7 @@ export type Service = {
 
           contactUsContent: { // ✅ Add contact section dynamically
             title: "Request Your Complimentary Quote",
-            description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
+            description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/Yachtsfooter.png",
           },
           sections: []
@@ -409,15 +415,12 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Wine and Spirits",
             description: "Personalized Protection for Your Wine and Spirits",
-            backgroundImage: "/spiritshero1.png",
-            showButtons: true, 
-
-           
+            backgroundImage: "/spiritshero1.png",       
           },
           
           whyUsContent: {
             title: "What We Cover",
-            description: "By paying a premium, the insurer agrees to cover specific personal goods-related losses as outlined in your policy. This coverage typically includes:",
+            description: "By paying a premium, the insurer agrees to cover specific losses related to your wine and spirits collection as outlined in your policy.",
             services: [
               { image: "/spiritscover1.png", name: "Broad Coverage for Loss or Damage", description: "Protects your wine collection against risks such as fire, theft, breakage, vandalism, and temperature-related damage due to mechanical failure (e.g., wine cellar cooling system malfunctions).", isDimmed: true, overlayImage:"/wineicon1.svg"  },
               { image: "/spiritscover2.png", name: "Worldwide Coverage", description: "Ensures your wine collection is protected whether stored at home, in a secondary residence, or in transit (e.g., shipping or moving between locations).", isDimmed: true, overlayImage: "/wineicon2.svg" },  // ✅ Dimmed with overlay
@@ -432,7 +435,7 @@ export type Service = {
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
-          buttonText: "Get a Jewelry Quote",
+          buttonText: "Email", // ✅ Will render the Email button
           backgroundImage: "/spiritscover.png",
         },
 
@@ -469,7 +472,7 @@ export type Service = {
 
           contactUsContent: { // ✅ Add contact section dynamically
             title: "Request Your Complimentary Quote",
-            description: "When it comes to safeguarding your vehicle, trust in comprehensive protection that keeps your car safe from unexpected events.",
+            description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/spiritsfooter.png",
           },
           sections: []

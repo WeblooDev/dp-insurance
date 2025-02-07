@@ -7,6 +7,7 @@ import HeroTemplate from "../sections/HeroTemplate";
 import ContactUs from "../sections/ContactUs";
 import WhyUs from "../sections/whyUs";
 import MediaSection from "../sections/ImageSection";
+import ServiceCard from "../sections/Template";
 
 // ✅ Fix: Ensure `params` is awaited
 interface ServicePageProps {
@@ -16,6 +17,7 @@ interface ServicePageProps {
 export default async function ServicePage({ params }: ServicePageProps) {
   const resolvedParams = await params; // ✅ Await the params
   const { serviceId } = resolvedParams; // ✅ Now it's a resolved object
+  const services = await getServices();
 
   if (!serviceId) {
     throw new Error("Service ID is missing! Check your URL.");
@@ -35,7 +37,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           title={service.heroSection.title}
           description={service.heroSection.description}
           backgroundImage={service.heroSection.backgroundImage}
-          showButtons={service.heroSection.showButtons} 
+          showButton={service.heroSection.showButton} 
         />
       )}
 
@@ -64,13 +66,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
         />
       ))}
 
-      {service.requestContent && (
-        <Request
-          title={service.requestContent.title}
-          buttons={[{ text: "Get a Quote", variant: "primary" }]}
-          backgroundImage={service.requestContent.backgroundImage}
-        />
-      )}
+    {service.requestContent && (
+      <Request
+        title={service.requestContent.title}
+        backgroundImage={service.requestContent.backgroundImage}
+        buttonText={service.requestContent.buttonText} // Dynamically passing button text
+      />
+    )}
+
 
       {service.faqSection && (
         <FAQSection
@@ -80,13 +83,33 @@ export default async function ServicePage({ params }: ServicePageProps) {
         />
       )}
 
-      {service.contactUsContent && (
-        <ContactUs
-          title={service.contactUsContent.title}
-          description={service.contactUsContent.description}
-          backgroundImage={service.contactUsContent.backgroundImage}
-        />
-      )}
+<section className="w-full mx-auto pb-28 sm:px-12">
+        <div className="title flex self-center  justify-center pb-12 text-5xl ">
+            <h1 className="font-ivar text-[40px] tracking-tight ">Coverage Options</h1>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 lg:gap-8">
+        {services.map((service, index) => (
+            <ServiceCard
+              key={service.id}
+              id={service.id}
+              name={service.name}
+              imageUrl={service.backgroundImage || "/default-service.jpg"}
+              index={index} // ✅ Pass the missing prop
+            />
+          ))}
+
+        </div>
+        </section>
+
+{service.contactUsContent && (
+  <ContactUs
+    title={service.contactUsContent.title}
+    description={service.contactUsContent.description}
+    backgroundImage={service.contactUsContent.backgroundImage}
+    showGetQuoteButton={service.contactUsContent.showGetQuoteButton} 
+  />
+)}
+
     </main>
   );
 }
