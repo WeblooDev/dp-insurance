@@ -29,8 +29,8 @@ export default function HeroTemplate({ title, description, backgroundImage, show
         <div className="container mx-auto gap-6 flex flex-col h-full p-4 md:p-12 md:pt-40 justify-center lg:justify-between">
           <div className="flex flex-col items-center justify-center">
             <h2 className="font-ivar mb-4 text-[40px] md:text-[50px] text-white">{title}</h2>
-            <p className="mb-8 text-[20px] text-white max-w-[70%]">{description}</p>
-          </div>
+            <p className="mb-8 text-[16px]  text-white sm:text-[20px] max-w-full sm:max-w-[60%]">{description}</p>
+            </div>
 
           <div className="flex flex-col justify-center items-center gap-4 sm:flex-row sm:gap-6">
             {/* Email Button (Always Visible) */}

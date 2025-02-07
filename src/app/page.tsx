@@ -79,9 +79,9 @@ export default async function Home() {
         <SplitSection
             imageUrl="/heroSplit-right.png"
             content={[
-            { title: "Bespoke Policies", description: "Every asset is unique—your insurance should be too. Our custom policies provide precise coverage for your luxury lifestyle." },
-            { title: "Effortless Claims", description: "When the unexpected happens, we make it right. Our streamlined claims process ensures fast, hassle-free resolutions." },
-            { title: "Global Coverage", description: "Wherever life takes you, your assets are protected. We offer worldwide insurance solutions for ultimate peace of mind." }
+            { title: "Bespoke Policies", description: "Every asset is unique, and your insurance should reflect that. Our custom policies offer meticulous coverage tailored to your luxury lifestyle." },
+            { title: "Effortless Claims", description: "When the unexpected happens, we are here to make it right. Our claims process ensures fast and hassle-free resolutions." },
+            { title: "Global Coverage", description: "Your assets are protected, wherever life takes you. We offer worldwide insurance solutions for ultimate peace of mind." }
             ]}
       />
 
