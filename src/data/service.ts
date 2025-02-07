@@ -60,7 +60,7 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Luxury Cars",
             description: "The care your luxury cars deserve, with coverage that meets the highest standards",
-            backgroundImage: "/automotiveHero.png",
+            backgroundImage: "/v1hero.png",
             showButton: true, 
           
           },
@@ -100,9 +100,9 @@ export type Service = {
             title: "What We Cover",
             description: "We provide the best coverage for luxury and commercial vehicles.",
             services: [
-              { image: "/automotivecover1.png", name: "Liability Coverage", description: "This mandatory coverage pays for damages you cause to others' property or injuries in an accident where you're at fault..", isDimmed: true, overlayImage:"/layer1.png"  },
-              { image: "/automotivecover2.png", name: "Comprehensive Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.", isDimmed: true, overlayImage: "/layer2.png" },  // ✅ Dimmed with overlay
-              { image: "/automotivecover3.png", name: "Collision Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it overturns or collides with another vehicle or object.", isDimmed: true, overlayImage:"/layer3.png"  }
+              { image: "/ac1.png", name: "Liability Coverage", description: "This mandatory coverage pays for damages you cause to others' property or injuries in an accident where you're at fault..", isDimmed: true, overlayImage:"/layer1.png"  },
+              { image: "/ac2.png", name: "Comprehensive Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.", isDimmed: true, overlayImage: "/layer2.png" },  // ✅ Dimmed with overlay
+              { image: "/ac3.png", name: "Collision Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it overturns or collides with another vehicle or object.", isDimmed: true, overlayImage:"/layer3.png"  }
             ]
           },
         imageSection: { 
@@ -138,7 +138,7 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Fine Jewelry and Collectibles",
             description: "Protecting your most prized possessions with coverage that honors their value",
-            backgroundImage: "/Jewelryherospecial.png",
+            backgroundImage: "/v2hero.png",
 
 
           },
@@ -159,19 +159,48 @@ export type Service = {
             description: "Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy.",
             faqs: [
               { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
-              { question: "How are the values of my Collectibles determined? (jewelry, fine arts, wine, etc.)", answer: "For high-value or rare pieces, we recommend professional appraisals to ensure accurate coverage. If you have recent purchase receipts, auction results, or third-party valuations, we can use them to help determine the proper insurance amount. Our goal is to protect your collection at its true worth, so you can have peace of mind knowing it’s covered in case of loss, theft, or damage." },
-              { question: "What types of Collectibles can be insured?", answer: "At duPont Registry Insurance, we offer comprehensive coverage for a wide range of valuable collections. Our policies can protect items such as: Jewelry: From individual pieces to extensive collections, your jewelry is safeguarded against various risks. Fine Art: Including paintings, sculptures, and artifacts, we ensure your art pieces are covered. Wine and Spirits: Whether you have a few rare bottles or a vast cellar, our coverage protects your collection. Designer Couture and Handbags: High-value fashion items, such as designer clothing and handbags, are also insurable under our policies. Additionally, we provide coverage for other collectibles, including: Antiques, Sports, Memorabilia, Musical, Instruments, Rare Books, Stamps and Coins. Our goal is to offer tailored insurance solutions that meet the unique needs of collectors, ensuring your treasured items are protected." },
+
+              { question: "Change to How are the values of my collectables determined? (jewelry, fine arts, wine, etc.)", answer: "For high-value or rare pieces, we recommend professional appraisals to ensure accurate coverage. If you have recent purchase receipts, auction results, or third-party valuations, we can use them to help determine the proper insurance amount. Our goal is to protect your collection at its true worth, so you can have peace of mind knowing it’s covered in case of loss, theft, or damage." },
+
+              { question: "what types of collectables can be insured?", 
+                answer: `
+                
+                    <p >At duPont Registry Insurance, we offer comprehensive coverage for a wide range of valuable collections. Our policies can protect items such as:</p>
+
+                    <div class="spe">
+                      <p><strong>Jewelry:</strong> From individual pieces to extensive collections, your jewelry is safeguarded against various risks.</p>
+                      <p><strong>Fine Art:</strong> Including paintings, sculptures, and artifacts, we ensure your art pieces are covered.</p>
+                      <p><strong>Wine and Spirits:</strong> Whether you have a few rare bottles or a vast cellar, our coverage protects your collection.</p>
+                      <p><strong>Designer Couture and Handbags:</strong> High-value fashion items, such as designer clothing and handbags, are also insurable under our policies.</p>
+                      </div>
+
+                    <p>Additionally, we provide coverage for other collectibles, including:</p>
+                      <li>Antiques</li>
+                      <li>Sports Memorabilia</li>
+                      <li>Musical Instruments</li>
+                      <li>Rare Books</li>
+                      <li>Stamps and Coins</li>
+
+                          <p class="mt">Our goal is to offer tailored insurance solutions that meet the unique needs of collectors, ensuring your treasured items are protected.</p>
+
+                      
+                  
+                `,
+                },
+             
               { question: "Are pictures and appraisals required?", answer: "Documentation requirements vary depending on the value of your collectibles. For high-value items, insurers may require appraisals, receipts, or photographs to establish accurate coverage. While lower-value pieces may not always need documentation, providing pictures and purchase records is highly recommended. This helps streamline the claims process and ensures your items are insured at their true worth. Each policy is tailored to your collection, so we can guide you on the best documentation practices for comprehensive protection." },
             ],
           },
         
+
+          
           whyUsContent: {
             title: "What We Cover",
             description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/Jewelrycover1.png", name: "Agreed Value", description: "This essential coverage pays for repair or replacement costs if your jewelry is lost, stolen, or damaged, ensuring peace of mind for your valuable items.", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
-              { image: "/Jewelrycover2.png", name: "Worldwide coverage", description: "This coverage protects items wherever they are located, whether at home, in transit, or on display (e.g., in galleries, museums, or private events).", isDimmed: true, overlayImage: "/coverjewelryicon2.svg" },  // ✅ Dimmed with overlay
-              { image: "/Jewelrycover3.png", name: "Accidental breakage or damage", description: "Accidental breakage or damage coverage ensures your valuable jewelry is protected against unexpected mishaps, such as dropping, chipping, or cracking, providing comprehensive peace of mind for high-net-worth collectors.", isDimmed: true, overlayImage:"/coverjewelryicon3.svg"  }
+              { image: "/jc1.png", name: "Agreed Value", description: "This essential coverage pays for repair or replacement costs if your jewelry is lost, stolen, or damaged, ensuring peace of mind for your valuable items.", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
+              { image: "/jc2.png", name: "Worldwide coverage", description: "This coverage protects items wherever they are located, whether at home, in transit, or on display (e.g., in galleries, museums, or private events).", isDimmed: true, overlayImage: "/coverjewelryicon2.svg" },  // ✅ Dimmed with overlay
+              { image: "/jc3.png", name: "Accidental breakage or damage", description: "Accidental breakage or damage coverage ensures your valuable jewelry is protected against unexpected mishaps, such as dropping, chipping, or cracking, providing comprehensive peace of mind for high-net-worth collectors.", isDimmed: true, overlayImage:"/coverjewelryicon3.svg"  }
             ]
           },
         imageSection: { // ✅ Only Jewelry Insurance has this section
@@ -207,7 +236,7 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Luxury Properties",
             description: "Safeguarding your valued estates with coverage that preserves their prestige",
-            backgroundImage: "/realstatehero.png",
+            backgroundImage: "/v3hero.png",
 
         
           },      
@@ -215,9 +244,9 @@ export type Service = {
             title: "What We Cover",
             description: "By paying a premium, the insurer agrees to cover specific real estate-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/realstatecover1.png", name: "Rebuilding flexibility", description: "In the event of a fire or other loss that destroys your home, this coverage allows you to choose between rebuilding or receiving a cash settlement—putting the decision in your hands.", isDimmed: true, overlayImage:"/real1.svg"  },
-              { image: "/realstatecover2.png", name: "Guaranteed Home Replacement Cost", description: "This coverage ensures that your luxury home can be rebuilt to its original standard, even if the rebuilding costs exceed your policy limits, providing you with ultimate peace of mind.", isDimmed: true, overlayImage: "/real2.svg" },  // ✅ Dimmed with overlay
-              { image: "/realstatecover3.png", name: "Personal Liability", description: "Everyday life carries risks of accidents or allegations against you and your family. Personal liability coverage protects you from financial loss by covering defense costs and damages for accidental injury or property damage.", isDimmed: true, overlayImage:"/real3.svg"  }
+              { image: "/rc1.png", name: "Rebuilding flexibility", description: "In the event of a fire or other loss that destroys your home, this coverage allows you to choose between rebuilding or receiving a cash settlement—putting the decision in your hands.", isDimmed: true, overlayImage:"/real1.svg"  },
+              { image: "/rc2.png", name: "Guaranteed Home Replacement Cost", description: "This coverage ensures that your luxury home can be rebuilt to its original standard, even if the rebuilding costs exceed your policy limits, providing you with ultimate peace of mind.", isDimmed: true, overlayImage: "/real2.svg" },  // ✅ Dimmed with overlay
+              { image: "/rc3.png", name: "Personal Liability", description: "Everyday life carries risks of accidents or allegations against you and your family. Personal liability coverage protects you from financial loss by covering defense costs and damages for accidental injury or property damage.", isDimmed: true, overlayImage:"/real3.svg"  }
             ]
           },
           imageSection: { 
@@ -255,7 +284,22 @@ export type Service = {
               { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
               { question: "What makes luxury home insurance different from standard homeowners insurance?", answer: "Luxury home insurance is designed to provide broader and more customizable coverage for high-value properties. It accounts for the unique features of luxury homes, such as high-end materials, custom architecture, fine art collections, and additional structures like guest houses or private pools. Unlike standard policies, luxury home insurance often includes extended replacement cost coverage, cash settlement options, and protection against risks like water damage, cyber threats, and identity theft." },
               { question: "How is the value of my home determined for insurance purposes?", answer: "Insurance carriers use a combination of expert appraisals, market data, and specialized cost estimators to determine the true replacement value of your home. This includes high-end finishes, custom craftsmanship, and any unique architectural details. Unlike market value, which fluctuates based on real estate trends, your home’s insured value is based on the cost to rebuild it to its original specifications with similar quality materials." },
-              { question: "What additional coverages are available for luxury homes?", answer: "Luxury home insurance policies offer enhanced protection beyond standard homeowners insurance, including: Extended Replacement Cost: Covers rebuilding costs, even if they exceed policy limits. High-Value Personal Property: Coverage for fine art, jewelry, wine collections, and more. Private Staff & Liability: Protection for household employees, such as nannies or estate managers. Cyber & Identity Theft Protection: Safeguards against cyberattacks and fraud. Water & Sewer Backup Coverage: Covers damage from sump pump failure, or water/sewer backups." },
+               { question: "What additional coverages are available for luxury homes?", 
+                answer: `
+                
+                    <p >Luxury home insurance policies offer enhanced protection beyond standard homeowners insurance, including:</p>
+
+                    <div class="spe">
+                      <p><strong>Extended Replacement Cost:</strong> Covers rebuilding costs, even if they exceed policy limits.</p>
+                      <p><strong>High-Value Personal Property:</strong> Coverage for fine art, jewelry, wine collections, and more.</p>
+                      <p><strong>Private Staff & Liability:</strong> Protection for household employees, such as nannies or estate managers.</p>
+                      <p><strong>Cyber & Identity Theft Protection: :</strong> Safeguards against cyberattacks and fraud.</p>
+                       <p><strong> Water & Sewer Backup Coverage: </strong>Covers damage from sump pump failure, or water/sewer backups.</p>
+                      </div>
+
+                   
+                `,
+                },
             ],
           },
           contactUsContent: { 
@@ -275,7 +319,7 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Aircraft Owners",
             description: "Securing your aviation investments with the highest level of protection",
-            backgroundImage: "/Aviationherospecial.png",
+            backgroundImage: "/v4hero.png",
 
          
           },
@@ -284,9 +328,9 @@ export type Service = {
             title: "What We Cover",
             description: "By paying a premium, the insurer agrees to cover specific real aviation losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/Aviationcover1.png", name: "Hull Coverage", description: "Protects the aircraft itself against physical damage from accidents, theft, or weather-related events, whether in the air or on the ground.", isDimmed: true, overlayImage:"/covera1icon.svg"  },
-              { image: "/Aviationcover2.png", name: "Liability Coverage", description: "Covers bodily injury or property damage caused to others while operating the aircraft, ensuring financial protection in case of lawsuits or claims.", isDimmed: true, overlayImage: "/covera2icon.svg" },  // ✅ Dimmed with overlay
-              { image: "/Aviationcover3.png", name: "Hangar Coverage", description: "Protects the hangar or storage facility you own or lease for your aircraft against physical damage, ensuring your storage space is covered in case of fire, theft, or other covered events.", isDimmed: true, overlayImage:"/covera3icon.svg"  }
+              { image: "/p1.png", name: "Hull Coverage", description: "Protects the aircraft itself against physical damage from accidents, theft, or weather-related events, whether in the air or on the ground.", isDimmed: true, overlayImage:"/covera1icon.svg"  },
+              { image: "/p2.png", name: "Liability Coverage", description: "Covers bodily injury or property damage caused to others while operating the aircraft, ensuring financial protection in case of lawsuits or claims.", isDimmed: true, overlayImage: "/covera2icon.svg" },  // ✅ Dimmed with overlay
+              { image: "/p3.png", name: "Hangar Coverage", description: "Protects the hangar or storage facility you own or lease for your aircraft against physical damage, ensuring your storage space is covered in case of fire, theft, or other covered events.", isDimmed: true, overlayImage:"/covera3icon.svg"  }
             ]
           },
 
@@ -347,7 +391,7 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Yachts & Watercraft",
             description: "Exceptional protection for your yachts and watercraft, ensuring peace of mind on every voyage",
-            backgroundImage: "/Yachtshero.png",
+            backgroundImage: "/v5hero.png",
 
           
           },
@@ -356,9 +400,9 @@ export type Service = {
             title: "What We Cover",
             description: "By paying a premium, the insurer agrees to cover specific marine-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/Yachtscover1.png", name: "Agreed Value Coverage", description: "Provides full reimbursement based on the pre-determined value of your yacht/watercraft in the event of a total loss, with no depreciation applied..", isDimmed: true, overlayImage:"/marine1icon.svg"  },
-              { image: "/Yachtscover2.png", name: "Liability Protection", description: "Customized coverage limits to match your needs, including legal defense costs, liability under the Oil Pollution Act of 1990, wreck removal expenses, and Jones Act coverage for your paid crew.", isDimmed: true, overlayImage: "/marine2icon.svg" },  // ✅ Dimmed with overlay
-              { image: "/Yachtscover3.png", name: "Uninsured / Underinsured Boater Coverage", description: "Provides compensation for bodily injuries sustained by individuals on the insured yacht/watercraft when injured by another vessel's uninsured or underinsured owner or operator.", isDimmed: true, overlayImage:"/time.svg"  }
+              { image: "/y1.png", name: "Agreed Value Coverage", description: "Provides full reimbursement based on the pre-determined value of your yacht/watercraft in the event of a total loss, with no depreciation applied..", isDimmed: true, overlayImage:"/marine1icon.svg"  },
+              { image: "/y2.png", name: "Liability Protection", description: "Customized coverage limits to match your needs, including legal defense costs, liability under the Oil Pollution Act of 1990, wreck removal expenses, and Jones Act coverage for your paid crew.", isDimmed: true, overlayImage: "/marine2icon.svg" },  // ✅ Dimmed with overlay
+              { image: "/y3.png", name: "Uninsured / Underinsured Boater Coverage", description: "Provides compensation for bodily injuries sustained by individuals on the insured yacht/watercraft when injured by another vessel's uninsured or underinsured owner or operator.", isDimmed: true, overlayImage:"/time.svg"  }
             ]
           },
 
@@ -421,16 +465,16 @@ export type Service = {
         heroSection: { 
             title: "Premium Insurance for Wine and Spirits",
             description: "Preserving the rarity and value of your collection as it matures with time",
-            backgroundImage: "/spiritshero1.png",       
+            backgroundImage: "/v6hero.png",       
           },
           
           whyUsContent: {
             title: "What We Cover",
             description: "By paying a premium, the insurer agrees to cover specific losses related to your wine and spirits collection as outlined in your policy.",
             services: [
-              { image: "/spiritscover1.png", name: "Broad Coverage for Loss or Damage", description: "Protects your wine collection against risks such as fire, theft, breakage, vandalism, and temperature-related damage due to mechanical failure (e.g., wine cellar cooling system malfunctions).", isDimmed: true, overlayImage:"/wineicon1.svg"  },
-              { image: "/spiritscover2.png", name: "Worldwide Coverage", description: "Ensures your wine collection is protected whether stored at home, in a secondary residence, or in transit (e.g., shipping or moving between locations).", isDimmed: true, overlayImage: "/wineicon2.svg" },  // ✅ Dimmed with overlay
-              { image: "/spiritscover3.png", name: "Spoilage Coverage", description: "Covers spoilage caused by power outages, refrigeration failures, or climate control system malfunctions that result in temperature changes.", isDimmed: true, overlayImage:"/wineicon3.svg"  }
+              { image: "/w1.png", name: "Broad Coverage for Loss or Damage", description: "Protects your wine collection against risks such as fire, theft, breakage, vandalism, and temperature-related damage due to mechanical failure (e.g., wine cellar cooling system malfunctions).", isDimmed: true, overlayImage:"/wineicon1.svg"  },
+              { image: "/w2.png", name: "Worldwide Coverage", description: "Ensures your wine collection is protected whether stored at home, in a secondary residence, or in transit (e.g., shipping or moving between locations).", isDimmed: true, overlayImage: "/wineicon2.svg" },  // ✅ Dimmed with overlay
+              { image: "/w3.png", name: "Spoilage Coverage", description: "Covers spoilage caused by power outages, refrigeration failures, or climate control system malfunctions that result in temperature changes.", isDimmed: true, overlayImage:"/wineicon3.svg"  }
             ]
           },
 
@@ -470,7 +514,21 @@ export type Service = {
             description: "Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy.",
             faqs: [
               { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
-              { question: "What types of couture and high-value fashion items can be insured?", answer: "Our policies cover a wide range of luxury fashion items, including: Designer clothing & couture collections (custom gowns, runway pieces, bespoke suits) Luxury handbags (Hermès, Chanel, Louis Vuitton, etc.) Rare & vintage fashion pieces High-end shoes & accessories (watches, belts, scarves, sunglasses) Fur & exotic leather goods Whether your collection is for personal use or investment, we ensure comprehensive protection." },
+              { question: "What types of couture and high-value fashion items can be insured?", 
+                answer: `
+                
+                <p>Our policies cover a wide range of luxury fashion items, including:</p>
+
+                <div class="spe">
+                  <p><strong>Designer clothing & couture collections </strong>(custom gowns, runway pieces, bespoke suits)</p>
+                  <p><strong>Luxury handbags</strong>  (Hermès, Chanel, Louis Vuitton, etc.)</p>
+                  <p><strong>Rare & vintage fashion pieces </strong></p>
+                  <p><strong>High-end shoes & accessories </strong> (watches, belts, scarves, sunglasses)</p>
+                   <p><strong>Fur & exotic leather goods</strong> Whether your collection is for personal use or investment, we ensure comprehensive protection.</p>
+                  </div>
+
+               
+            `, },
               { question: "How is the value of my couture collection determined?", answer: "The insured value is typically based on purchase price, appraisal, or current market value. For rare and vintage pieces, we work with industry experts to assess their worth. " },
               { question: " Does insurance cover damage, theft, or loss while traveling?", answer: "Yes, many couture insurance policies offer worldwide coverage, protecting your collection whether it's at home, in storage, or while traveling. " },
             ],

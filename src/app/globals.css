@@ -33,6 +33,27 @@ body {
   font-family: 'Ivar Display Hydro', sans-serif;
 }
 
+.spe{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.mt{
+  margin-top: 15px;
+}
+ul {
+  margin-bottom: 1.5rem; 
+}
+
+li {
+  padding-left: 20px;
+}
+
+
 @layer base {
   :root {
     --radius: 0.5rem;
