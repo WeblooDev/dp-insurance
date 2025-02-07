@@ -18,8 +18,8 @@ export default function MediaSection({ mediaUrl, altText = "Media" }: MediaSecti
             loop
             muted
             playsInline
-            className="object-cover rounded-lg w-full h-[70vh] min-h-[300px]"
-          />
+            className="object-cover rounded-lg w-full h-[30vh] sm:h-[70vh] min-h-[300px]"
+            />
         ) : (
           <Image
             src={mediaUrl}
