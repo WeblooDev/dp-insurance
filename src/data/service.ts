@@ -48,9 +48,8 @@ export type Service = {
   };
 };
 
-
   
-  export const getServices = async (): Promise<Service[]> => {
+export const getServices = async (): Promise<Service[]> => {
     return [
 
       {
@@ -68,22 +67,22 @@ export type Service = {
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/automotivefooter.png",
-            showGetQuoteButton: true, // ✅ Set to true to display the "Get Quote" button
+            showGetQuoteButton: true, 
 
           },
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
-            buttonText: "Get Quote", // ✅ Will render "Get a Quote" button
+            buttonText: "Request a Complimentary Review", // ✅ Will render "Get a Quote" button
             backgroundImage: "/automotiveferrari.png",
           },
           faqSection: { 
             title: "Frequently Asked Questions",
             description: "Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars. Select from multiple plan options by top insurance companies the highest-rated coverage provider for exotic cars." },
               { question: "How much are deductibles for luxury sports cars and other expensive vehicles?", answer: "In contrast to plans sold by generic insurance providers, insurance plans sold by duPont REGISTRY Insurance offer a zero deductible for most vehicles, including the best luxury cars around. Other deductible options are available and vary by state and vehicle type. Any applicable deductibles will be available during the online quoting process." },
               { question: "How many years of driving experience are required to be eligible for exotic car coverage?", answer: "Since luxury vehicles are typically more costly to repair, special driver conditions apply. Every driver must be fully licensed with no state-imposed restrictions (such as a suspension). Operators of motorcycles and high-performance vehicles must be licensed for a minimum of 10 years to be eligible for coverage." },
-              { question: "Who can drive my car?", answer: "As long as a driver meets the acceptable usage guidelines mentioned above, it's up to your discretion who you allow to take your Ferrari or Porsche for a drive. Have questions? Contact our concierge team to discuss your specific situation." },
+              { question: "Who can drive my car?", answer: "Please speak to your advisor to determine your policy guidelines. " },
 
 
               { question: "Is it more expensive to insure the most expensive cars?", answer: "Many factors contribute to monthly insurance premiums for the best luxury cars, but it's not nearly as expensive as most collectors anticipate. Luxury car insurance rates depend on factors like your vehicle's value, location, storage, and usage. Keeping your car in a secure location, such as a locked garage, is favorable to insurers. Discounts may also be available, such as good driver discounts and multi-car discounts." },
@@ -98,7 +97,7 @@ export type Service = {
         
           whyUsContent: {
             title: "What We Cover",
-            description: "We provide the best coverage for luxury and commercial vehicles.",
+            description: "We provide the best coverage for luxury vehicles.",
             services: [
               { image: "/ac1.png", name: "Liability Coverage", description: "This mandatory coverage pays for damages you cause to others' property or injuries in an accident where you're at fault..", isDimmed: true, overlayImage:"/layer1.png"  },
               { image: "/ac2.png", name: "Comprehensive Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.", isDimmed: true, overlayImage: "/layer2.png" },  // ✅ Dimmed with overlay
@@ -146,7 +145,7 @@ export type Service = {
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/Jewelryrolex.png",
-            showGetQuoteButton: false, // ✅ Set to true to display the "Get Quote" button
+            showGetQuoteButton: false, 
 
           },
           requestContent: {
@@ -158,7 +157,7 @@ export type Service = {
             title: "Frequently Asked Questions",
             description: "Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies the highest-rated coverage provider for exotic cars." },
 
               { question: "Change to How are the values of my collectables determined? (jewelry, fine arts, wine, etc.)", answer: "For high-value or rare pieces, we recommend professional appraisals to ensure accurate coverage. If you have recent purchase receipts, auction results, or third-party valuations, we can use them to help determine the proper insurance amount. Our goal is to protect your collection at its true worth, so you can have peace of mind knowing it’s covered in case of loss, theft, or damage." },
 
@@ -168,7 +167,7 @@ export type Service = {
                     <p >At duPont Registry Insurance, we offer comprehensive coverage for a wide range of valuable collections. Our policies can protect items such as:</p>
 
                     <div class="spe">
-                      <p><strong>Jewelry:</strong> From individual pieces to extensive collections, your jewelry is safeguarded against various risks.</p>
+                      <p><strong>Jewelry:</strong> From individual pieces to extensive collections, your Jewelry is safeguarded against various risks.</p>
                       <p><strong>Fine Art:</strong> Including paintings, sculptures, and artifacts, we ensure your art pieces are covered.</p>
                       <p><strong>Wine and Spirits:</strong> Whether you have a few rare bottles or a vast cellar, our coverage protects your collection.</p>
                       <p><strong>Designer Couture and Handbags:</strong> High-value fashion items, such as designer clothing and handbags, are also insurable under our policies.</p>
@@ -198,9 +197,9 @@ export type Service = {
             title: "What We Cover",
             description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/jc1.png", name: "Agreed Value", description: "This essential coverage pays for repair or replacement costs if your jewelry is lost, stolen, or damaged, ensuring peace of mind for your valuable items.", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
+              { image: "/jc1.png", name: "Agreed Value", description: "This essential coverage pays for repair or replacement costs if your Jewelry is lost, stolen, or damaged, ensuring peace of mind for your valuable items.", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
               { image: "/jc2.png", name: "Worldwide coverage", description: "This coverage protects items wherever they are located, whether at home, in transit, or on display (e.g., in galleries, museums, or private events).", isDimmed: true, overlayImage: "/coverjewelryicon2.svg" },  // ✅ Dimmed with overlay
-              { image: "/jc3.png", name: "Accidental breakage or damage", description: "Accidental breakage or damage coverage ensures your valuable jewelry is protected against unexpected mishaps, such as dropping, chipping, or cracking, providing comprehensive peace of mind for high-net-worth collectors.", isDimmed: true, overlayImage:"/coverjewelryicon3.svg"  }
+              { image: "/jc3.png", name: "Accidental breakage or damage", description: "Accidental breakage or damage coverage ensures your valuable Jewelry is protected against unexpected mishaps, such as dropping, chipping, or cracking, providing comprehensive peace of mind for high-net-worth collectors.", isDimmed: true, overlayImage:"/coverjewelryicon3.svg"  }
             ]
           },
         imageSection: { // ✅ Only Jewelry Insurance has this section
@@ -211,7 +210,7 @@ export type Service = {
             {
               imageUrl: "/jewelryright1.png",
               content: [
-                { title: "Mysterious disappearance", description: "Mysterious disappearance coverage protects your jewelry collection against unexplained loss, offering reassurance in situations where items vanish without a clear cause." },
+                { title: "Mysterious disappearance", description: "Mysterious disappearance coverage protects your Jewelry collection against unexplained loss, offering reassurance in situations where items vanish without a clear cause." },
                 { title: "Coverage for newly acquired Items", description: "Provides automatic, temporary coverage for newly purchased items until they are officially added to the policy." },
                 { title: "Coverage for transit & shipping", description: "Insures items while being transported, whether by air, sea, or specialized collection movers." }
               ],
@@ -257,7 +256,7 @@ export type Service = {
             {
               imageUrl: "/rightr.png",
               content: [
-                { title: "Risk Consulting", description: "Risk consultants provide complimentary home appraisals to ensure your home and valuables are fully protected, while also offering guidance on security and fire prevention." },
+                { title: "Risk Management Advice", description: "Risk Management Advice provide complimentary home appraisals to ensure your home and valuables are fully protected, while also offering guidance on security and fire prevention." },
                 { title: "Temporary Living Arrangements", description: "If a covered loss makes your home uninhabitable, this coverage will help you secure a comfortable temporary residence, whether it's a similar home in your school district or a suitable hotel." },
                 { title: "Cyber & Identity Theft", description: "Provides coverage for personal cyber risks, connected device vulnerabilities, and identity theft, ensuring protection against cyberattacks and compromised identities." }
               ],
@@ -281,10 +280,10 @@ export type Service = {
             title: "Frequently Asked Questions",
             description: "Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
-              { question: "What makes luxury home insurance different from standard homeowners insurance?", answer: "Luxury home insurance is designed to provide broader and more customizable coverage for high-value properties. It accounts for the unique features of luxury homes, such as high-end materials, custom architecture, fine art collections, and additional structures like guest houses or private pools. Unlike standard policies, luxury home insurance often includes extended replacement cost coverage, cash settlement options, and protection against risks like water damage, cyber threats, and identity theft." },
+              { question: "What is duPont REGISTRY Insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies the highest-rated coverage provider for exotic cars." },
+              { question: "What makes luxury home insurance different from standard homeowners insurance?", answer: "Luxury home insurance is designed to provide broader and more customizable coverage for high-value properties. It accounts for the unique features of High-Valued Homes., such as high-end materials, custom architecture and additional structures like guest houses or private pools. Unlike standard policies, luxury home insurance often includes extended replacement cost coverage, cash settlement options, and protection against risks like water damage, cyber threats, and identity theft." },
               { question: "How is the value of my home determined for insurance purposes?", answer: "Insurance carriers use a combination of expert appraisals, market data, and specialized cost estimators to determine the true replacement value of your home. This includes high-end finishes, custom craftsmanship, and any unique architectural details. Unlike market value, which fluctuates based on real estate trends, your home’s insured value is based on the cost to rebuild it to its original specifications with similar quality materials." },
-               { question: "What additional coverages are available for luxury homes?", 
+               { question: "What additional coverages are available for High-Valued Homes.?", 
                 answer: `
                 
                     <p >Luxury home insurance policies offer enhanced protection beyond standard homeowners insurance, including:</p>
@@ -306,7 +305,7 @@ export type Service = {
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/realstatefooter.png",
-            showGetQuoteButton: false, // ✅ Set to true to display the "Get Quote" button
+            showGetQuoteButton: false, 
 
           },
         sections: []
@@ -442,7 +441,7 @@ export type Service = {
             description: "Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy.",
             faqs: [
 
-             { question: "What is duPont REGISTRY insurance?", answer: "Aviation insurance provides coverage for aircraft owners, operators, and pilots against risks such as physical damage to the aircraft, liability for passenger injuries, and third-party property damage. Policies can also include coverage for hangars, ground equipment, and loss of use. Coverage options vary based on the type of aircraft, usage (private, corporate, or commercial), and specific policy needs." },
+             { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, jewlery, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies the highest-rated coverage provider for exotic cars." },
               { question: "What does yacht and watercraft insurance cover?", answer: "Yacht and watercraft insurance provides coverage for physical damage to your vessel, liability protection, and additional risks such as theft, weather-related damage, and pollution liability. Policies can also include protection for crew members, onboard personal property, towing assistance, and uninsured boaters. Coverage varies depending on the type, size, and usage of the vessel." },
               { question: "How is the value of my yacht or watercraft determined for insurance?", answer: "The insured value of your yacht or boat is typically based on its agreed value or purchase price." },
               { question: "Does yacht insurance cover international waters and hurricane zones?", answer: "Coverage varies depending on your policy and navigation limits. Some policies provide worldwide coverage, while others have specific navigational limits that restrict where you can operate your vessel. If you sail in hurricane-prone areas, you may need to follow storm preparedness plans to maintain coverage during hurricane season. Additional endorsements can be added for expanded cruising areas and year-round protection." },
@@ -479,7 +478,7 @@ export type Service = {
           },
 
         imageSection: { 
-          mediaUrl:"/spiritssection.png",
+          mediaUrl:"/spirritbigimage.png",
           altText: "Jewelry Insurance Banner"
         },
 
@@ -491,7 +490,7 @@ export type Service = {
 
         splitSections: [ 
             {
-              imageUrl: "/spiritsright.png",
+              imageUrl: "/rightspirit.png",
               content: [
                 { title: "All-Risk Coverage", description: "Protects art collections from risks like fire, theft, accidental damage, and natural disasters" },
                 { title: "Breakage Protection", description: "Covers accidental breakage, particularly for fragile sculptures or glass pieces." },
@@ -500,7 +499,7 @@ export type Service = {
               reverse: false, // Normal order
             },
             {
-              imageUrl: "/spiritsleft.png",
+              imageUrl: "/leftspirit.png",
               content: [
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out anytime. We’re happy to help ensure your prized possessions are properly protected." },
           
@@ -513,7 +512,7 @@ export type Service = {
             title: "Frequently Asked Questions",
             description: "Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy.",
             faqs: [
-              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies, including Hagerty, the highest-rated coverage provider for exotic cars." },
+              { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies the highest-rated coverage provider for exotic cars." },
               { question: "What types of couture and high-value fashion items can be insured?", 
                 answer: `
                 
@@ -537,20 +536,20 @@ export type Service = {
           contactUsContent: { // ✅ Add contact section dynamically
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
-            backgroundImage: "/spiritsfooter.png",
+            backgroundImage: "/footerimagespirit.png",
           },
           sections: []
 
       },
     
     ];
-  };
+};
 
-  
-  export const getServiceById = async (id: string): Promise<Service | null> => {
+
+export const getServiceById = async (id: string): Promise<Service | null> => {
     const services = await getServices(); // ✅ Ensure `await` is used here
     return services.find((service) => service.id === id) || null;
-  };
+};
   
   
   

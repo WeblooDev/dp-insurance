@@ -31,21 +31,32 @@ export default function ContactUs({ title, description, backgroundImage, showGet
             </a>
           </Button>
 
-          {/* ✅ Conditionally Render the "Get Quote" Button */}
           {showGetQuoteButton && (
             <Button asChild size="lg" className="rounded-[45px] !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90">
               <a href="https://www.dupontregistry.com/insurance/get-quote">
-                Get Quote
+                Request a Complimentary Review
               </a>
             </Button>
           )}
 
-          <Button asChild size="lg" className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black">
-            <a href="tel:+123456789">
-              <img src="/phonecall.svg" alt="Phone Icon" />
-              1-833-738-7668
-            </a>
-          </Button>
+<div className="relative flex flex-col items-center">
+            <Button
+              asChild
+              size="lg"
+              className=" gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
+            >
+              <a href="tel:+123456789">
+                <img src="/phonecall.svg" alt="Phone Icon" />
+                1-833-738-7668
+              </a>
+              
+              
+            </Button>
+            <span className="absolute bottom-[-30px] text-white text-sm mt-2">
+              Speak with an advisor
+            </span>
+            
+          </div>
         </div>
       </div>
     </section>

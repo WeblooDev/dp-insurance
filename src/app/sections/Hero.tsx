@@ -24,8 +24,8 @@ export default function HeroStatic() {
   }, []);
 
   return (
-<div className="relative h-[90vh] md:h-screen w-full overflow-hidden">
-{/* Background Image Container */}
+    <div className="relative h-[90vh] md:h-screen w-full overflow-hidden">
+      {/* Background Image Container */}
       <div className="absolute inset-0 w-full h-full transition-opacity duration-1000" style={{ opacity: fade ? 1 : 0 }}>
         <Image
           key={key} // Forces the animation restart
@@ -41,14 +41,13 @@ export default function HeroStatic() {
 
       {/* Content */}
       <div className="flex h-full justify-center md:justify-between gap-6 items-center flex-col relative z-10 p-4 md:p-12 md:pt-44 text-center">
-      <div className="flex flex-col items-center justify-center ">
-        <h2 className="font-ivar mb-4 text-[40px] md:text-[50px] text-white">
-        duPont REGISTRY Insurance
-      </h2>
-
+        <div className="flex flex-col items-center justify-center ">
+          <h2 className="font-ivar mb-4 text-[40px] md:text-[50px] text-white">
+            duPont REGISTRY Insurance
+          </h2>
 
           <p className="mb-8 text-[20px] text-white max-w-[70%] ">
-          Protect your luxury cars, jewelry, properties, yachts, and more with insurance designed for those who expect the best.
+            Protect your luxury cars, jewelry, properties, yachts, and more with insurance designed for those who expect the best.
           </p>
         </div>
 
@@ -69,18 +68,28 @@ export default function HeroStatic() {
             className="rounded-[45px] !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90"
           >
             <a href="https://www.dupontregistry.com/insurance/get-quote">
-              Get Quote
+              Request a Complimentary Review
             </a>
           </Button>
-          <Button
-            asChild
-            size="lg"
-            className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
-          >
-            <a href="tel:+123456789">
-              <img src="/phonecall.svg" alt="Phone Icon" />
-              1-833-738-7668            </a>
-          </Button>
+
+          <div className="relative flex flex-col items-center">
+            <Button
+              asChild
+              size="lg"
+              className=" gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
+            >
+              <a href="tel:+123456789">
+                <img src="/phonecall.svg" alt="Phone Icon" />
+                1-833-738-7668
+              </a>
+              
+              
+            </Button>
+            <span className="absolute bottom-[-30px] text-white text-sm mt-2">
+              Speak with an advisor
+            </span>
+            
+          </div>
         </div>
       </div>
     </div>

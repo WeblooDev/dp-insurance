@@ -52,7 +52,7 @@ export default async function Home() {
         services={[
           {
             image: "/why1.png",
-            name: "Premiere Covergae Options",
+            name: "Premiere coverage Options",
             description: "Tailored insurance for luxury cars, jewelry, real estate, aviation, and yachts & watercraft-designed to fit your lifestyle."
           },
           {
@@ -71,7 +71,7 @@ export default async function Home() {
 
       <Request
         title="Request Your Exclusive Custom Insurance Quote"   
-        buttonText="Get Quote"
+        buttonText="Request a Complimentary Review"
         backgroundImage="/requestMainpage.png" // Ensure the image is in the `public/` folder
         />
 
@@ -80,7 +80,7 @@ export default async function Home() {
             imageUrl="/heroSplit-right.png"
             content={[
             { title: "Bespoke Policies", description: "Every asset is unique, and your insurance should reflect that. Our custom policies offer meticulous coverage tailored to your luxury lifestyle." },
-            { title: "Effortless Claims", description: "When the unexpected happens, we are here to make it right. Our claims process ensures fast and hassle-free resolutions." },
+            { title: "Claims Advocacy", description: "When the unexpected happens, we are here to make it right. Our claims process ensures fast and hassle-free resolutions." },
             { title: "Global Coverage", description: "Your assets are protected, wherever life takes you. We offer worldwide insurance solutions for ultimate peace of mind." }
             ]}
       />
@@ -98,7 +98,7 @@ export default async function Home() {
         />
 
         <ContactUs
-            title="Request Your Complimetay Quote"
+            title="Request Your Complimentary Quote"
             description="When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events."
             backgroundImage="/contact.png"
            showGetQuoteButton={true}
