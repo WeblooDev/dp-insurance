@@ -80,7 +80,7 @@ export default async function Home() {
             imageUrl="/heroSplit-right.png"
             content={[
             { title: "Bespoke Policies", description: "Every asset is unique, and your insurance should reflect that. Our custom policies offer meticulous coverage tailored to your luxury lifestyle." },
-            { title: "Claims Advocacy", description: "When the unexpected happens, we are here to make it right. Our claims process ensures fast and hassle-free resolutions." },
+            { title: "Claims Advocacy", description: "When the unexpected happens, We are committed to finding the best solution for you. Our claims process ensures fast and hassle-free resolutions." },
             { title: "Global Coverage", description: "Your assets are protected, wherever life takes you. We offer worldwide insurance solutions for ultimate peace of mind." }
             ]}
       />
@@ -89,10 +89,20 @@ export default async function Home() {
                 title="Frequently Asked Questions"
                 description="Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy."
                 faqs={[
-                { question: "What is duPont REGISTRY insurance?", answer: "duPont Registry Insurance is a specialized insurance program designed to protect high-value assets, including luxury homes, exotic cars, yachts, private aircraft, fine art, and collectibles. Our program is tailored for individuals who require premium coverage with concierge-level service. Whether you own a single high-value asset or a diverse collection, we provide customized insurance solutions to meet your unique needs." },
+                { question: "What is duPont REGISTRY insurance?", answer: "duPont Registry Insurance is a specialized insurance program designed to protect high-value assets, including luxury homes, exotic antique/classic cars, yachts, private aircraft, fine art, and collectibles. Our program is tailored for individuals who require premium coverage with concierge-level service. Whether you own a single high-value asset or a diverse collection, we provide customized insurance solutions to meet your unique needs." },
                 
                 { question: "What makes duPont Registry Insurance different from standard insurance providers?", answer: "Unlike traditional insurers, duPont REGISTRY Insurance partners with top-tier carriers specializing in high-net-worth coverage. Our policies offer: Agreed Value Coverage to ensure full payouts without depreciation. Worldwide Protection for assets like luxury homes and vehicles, couture collections, and fine art. Concierge Claims Service for a seamless, white-glove experience. Customizable Coverage designed for rare, collectible, and one-of-a-kind assets." },
-                { question: "How do I get a quote for my luxury assets?", answer: "Getting a quote is simple: Click the Get a Quote button on this page. 2. Our team will connect you with a high-net-worth insurance specialist to tailor a policy to your needs." },
+                { question: "çHow do I get a quote for my luxury assets?",  answer: `
+                
+                  <p >Getting a quote is simple:</p>
+                  <br/>
+                  <p > Click the Get a Quote button on this page. </p>
+                   <p > Our team will connect you with a high-net-worth insurance specialist to tailor a policy to your needs.</p>
+
+                 
+
+                 
+              ` },
                
                 ]}
         />

@@ -17,14 +17,14 @@ export default function HeroStatic() {
         setCurrentImage((prev) => (prev + 1) % slides.length);
         setKey((prevKey) => prevKey + 1); // Force restart animation
         setFade(true);
-      }, 500);
+      }, 300);
     }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative h-[90vh] md:h-screen w-full overflow-hidden">
+    <div className="relative h-[90vh] overflow-hidden">
       {/* Background Image Container */}
       <div className="absolute inset-0 w-full h-full transition-opacity duration-1000" style={{ opacity: fade ? 1 : 0 }}>
         <Image
@@ -40,7 +40,7 @@ export default function HeroStatic() {
       </div>
 
       {/* Content */}
-      <div className="flex h-full justify-center md:justify-between gap-6 items-center flex-col relative z-10 p-4 md:p-12 md:pt-44 text-center">
+      <div className="flex h-full justify-center md:justify-between gap-6 items-center flex-col relative z-10 p-4 md:p-16 md:pt-44 text-center">
         <div className="flex flex-col items-center justify-center ">
           <h2 className="font-ivar mb-4 text-[40px] md:text-[50px] text-white">
             duPont REGISTRY Insurance
