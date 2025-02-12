@@ -101,7 +101,7 @@ export const getServices = async (): Promise<Service[]> => {
             services: [
               { image: "/ac1.png", name: "Liability Coverage", description: "This mandatory coverage pays for damages you cause to others' property or injuries in an accident where you're at fault..", isDimmed: true, overlayImage:"/layer1.png"  },
               { image: "/ac2.png", name: "Comprehensive Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.", isDimmed: true, overlayImage: "/layer2.png" },  // ✅ Dimmed with overlay
-              { image: "/ac3.png", name: "Collision Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it overturns or collides with another vehicle or object.", isDimmed: true, overlayImage:"/layer3.png"  }
+              { image: "/ac3.png", name: "Collision Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it collides with another vehicle or object.", isDimmed: true, overlayImage:"/layer3.png"  }
             ]
           },
         imageSection: { 
@@ -159,7 +159,7 @@ export const getServices = async (): Promise<Service[]> => {
             faqs: [
               { question: "What is duPont REGISTRY insurance?", answer: "duPont REGISTRY is an insurance broker. It operates as a distributor of insurance options designed specifically to cover luxury and exotic cars, Jewelry, real estate, aviation, marine and personal goods. Select from multiple plan options by top insurance companies the highest-rated coverage provider for exotic cars." },
 
-              { question: "Change to How are the values of my collectables determined? (jewelry, fine arts, wine, etc.)", answer: "For high-value or rare pieces, we recommend professional appraisals to ensure accurate coverage. If you have recent purchase receipts, auction results, or third-party valuations, we can use them to help determine the proper insurance amount. Our goal is to protect your collection at its true worth, so you can have peace of mind knowing it’s covered in case of loss, theft, or damage." },
+              { question: "Change to How are the values of my collectables determined? (Jewelry, fine arts, wine, etc.)", answer: "For high-value or rare pieces, we recommend professional appraisals to ensure accurate coverage. If you have recent purchase receipts, auction results, or third-party valuations, we can use them to help determine the proper insurance amount. Our goal is to protect your collection at its true worth, so you can have peace of mind knowing it’s covered in case of loss, theft, or damage." },
 
               { question: "what types of collectables can be insured?", 
                 answer: `
@@ -195,9 +195,9 @@ export const getServices = async (): Promise<Service[]> => {
           
           whyUsContent: {
             title: "What We Cover",
-            description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
+            description: "By paying a premium, the insurer agrees to cover specific Jewelry-related losses as outlined in your policy. This coverage typically includes:",
             services: [
-              { image: "/jc1.png", name: "Agreed Value", description: "This essential coverage pays for repair or replacement costs if your Jewelry is lost, stolen, or damaged, ensuring peace of mind for your valuable items.", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
+              { image: "/jc1.png", name: "Agreed Value", description: "This essential coverage pays for repair or replacement costs If your jewelry or collectibles are lost, stolen or damaged, ensuring peace of mind for your valuable items", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
               { image: "/jc2.png", name: "Worldwide coverage", description: "This coverage protects items wherever they are located, whether at home, in transit, or on display (e.g., in galleries, museums, or private events).", isDimmed: true, overlayImage: "/coverjewelryicon2.svg" },  // ✅ Dimmed with overlay
               { image: "/jc3.png", name: "Accidental breakage or damage", description: "Accidental breakage or damage coverage ensures your valuable Jewelry is protected against unexpected mishaps, such as dropping, chipping, or cracking, providing comprehensive peace of mind for high-net-worth collectors.", isDimmed: true, overlayImage:"/coverjewelryicon3.svg"  }
             ]
@@ -290,7 +290,7 @@ export const getServices = async (): Promise<Service[]> => {
 
                     <div class="spe">
                       <p><strong>Extended Replacement Cost:</strong> Covers rebuilding costs, even if they exceed policy limits.</p>
-                      <p><strong>High-Value Personal Property:</strong> Coverage for fine art, jewelry, wine collections, and more.</p>
+                      <p><strong>High-Value Personal Property:</strong> Coverage for fine art, Jewelry, wine collections, and more.</p>
                       <p><strong>Private Staff & Liability:</strong> Protection for household employees, such as nannies or estate managers.</p>
                       <p><strong>Cyber & Identity Theft Protection: :</strong> Safeguards against cyberattacks and fraud.</p>
                        <p><strong> Water & Sewer Backup Coverage: </strong>Covers damage from sump pump failure, or water/sewer backups.</p>
