@@ -29,8 +29,8 @@ export default function Request({ title, backgroundImage, buttonText }: RequestP
           <Button
             asChild
             size="lg"
-            className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
-          >
+            className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
+            >
             <a href="mailto:info@example.com">
               <img src="/emailicon.svg" alt="Email Icon" />
               Email

@@ -25,7 +25,6 @@ export default function HeroStatic() {
 
   return (
     <div className="relative h-[90vh] overflow-hidden">
-      {/* Background Image Container */}
       <div className="absolute inset-0 w-full h-full transition-opacity duration-1000" style={{ opacity: fade ? 1 : 0 }}>
         <Image
           key={key} // Forces the animation restart
@@ -55,8 +54,8 @@ export default function HeroStatic() {
           <Button
             asChild
             size="lg"
-            className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
-          >
+            className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
+            >
             <a href="mailto:info@example.com">
               <img src="/emailicon.svg" alt="Email Icon" />
               Email
@@ -73,23 +72,21 @@ export default function HeroStatic() {
           </Button>
 
           <div className="relative flex flex-col items-center">
-            <Button
-              asChild
-              size="lg"
-              className=" gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
-            >
-              <a href="tel:+123456789">
-                <img src="/phonecall.svg" alt="Phone Icon" />
-                1-833-738-7668
-              </a>
-              
-              
-            </Button>
-            <span className="absolute bottom-[-30px] text-white text-sm mt-2">
-              Speak with an advisor
-            </span>
-            
-          </div>
+  <Button
+    asChild
+    size="lg"
+    className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
+  >
+    <a href="tel:+123456789">
+      <img src="/phonecall.svg" alt="Phone Icon" />
+      1-833-738-7668
+    </a>
+  </Button>
+  <span className="absolute bottom-[-30px] text-white text-sm mt-2">
+    Speak with an advisor
+  </span>
+</div>
+
         </div>
       </div>
     </div>

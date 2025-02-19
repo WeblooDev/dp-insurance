@@ -24,7 +24,9 @@ export default function ContactUs({ title, description, backgroundImage, showGet
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <Button asChild size="lg" className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black">
+          <Button asChild size="lg" 
+             className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
+>
             <a href="mailto:info@example.com">
               <img src="/emailicon.svg" alt="Email Icon" />
               Email
@@ -43,8 +45,8 @@ export default function ContactUs({ title, description, backgroundImage, showGet
             <Button
               asChild
               size="lg"
-              className=" gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black"
-            >
+              className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
+              >
               <a href="tel:+123456789">
                 <img src="/phonecall.svg" alt="Phone Icon" />
                 1-833-738-7668
