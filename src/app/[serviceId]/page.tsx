@@ -8,6 +8,7 @@ import ContactUs from "../sections/ContactUs";
 import WhyUs from "../sections/whyUs";
 import MediaSection from "../sections/ImageSection";
 import ServiceCard from "../sections/Template";
+import ImageGallery from "../sections/ImageGallery";
 
 // ✅ Fix: Ensure `params` is awaited
 interface ServicePageProps {
@@ -83,7 +84,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         />
       )}
 
-<section className="w-full mx-auto pb-28 sm:px-12">
+<section className="w-full mx-auto p-6 pb-28 sm:px-12">
         <div className="title flex self-center  justify-center pb-12 text-5xl ">
             <h1 className="font-ivar text-[40px] tracking-tight ">Coverage Options</h1>
         </div>
@@ -101,6 +102,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
         </section>
 
+        <ImageGallery />
+
+
 {service.contactUsContent && (
   <ContactUs
     title={service.contactUsContent.title}
@@ -109,6 +113,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
     showGetQuoteButton={service.contactUsContent.showGetQuoteButton} 
   />
 )}
+
+
+
 
     </main>
   );

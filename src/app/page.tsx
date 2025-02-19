@@ -9,6 +9,7 @@ import FAQSection from './sections/FaqSection';
 import HeroCarousel from "./sections/Hero";
 import LineCall from './sections/LineCall';
 import MediaSection from "./sections/ImageSection";
+import ImageGallery from "./sections/ImageGallery";
 
 export default async function Home() {
   const services = await getServices();
@@ -21,7 +22,7 @@ export default async function Home() {
 
 
 
-        <section className="w-full mx-auto px-4 sm:px-12 py-12">
+        <section className="w-full mx-auto p-12 sm:px-12 py-12">
         <div className="title flex self-center  justify-center pb-12 text-5xl ">
             <h1 className="font-ivar text-[40px] tracking-tight ">What we Cover</h1>
         </div>
@@ -92,7 +93,7 @@ export default async function Home() {
                 { question: "What is duPont REGISTRY insurance?", answer: "duPont Registry Insurance is a specialized insurance program designed to protect high-value assets, including luxury homes, exotic antique/classic cars, yachts, private aircraft, fine art, and collectibles. Our program is tailored for individuals who require premium coverage with concierge-level service. Whether you own a single high-value asset or a diverse collection, we provide customized insurance solutions to meet your unique needs." },
                 
                 { question: "What makes duPont Registry Insurance different from standard insurance providers?", answer: "Unlike traditional insurers, duPont REGISTRY Insurance partners with top-tier carriers specializing in high-net-worth coverage. Our policies offer: Agreed Value Coverage to ensure full payouts without depreciation. Worldwide Protection for assets like luxury homes and vehicles, couture collections, and fine art. Concierge Claims Service for a seamless, white-glove experience. Customizable Coverage designed for rare, collectible, and one-of-a-kind assets." },
-                { question: "çHow do I get a quote for my luxury assets?",  answer: `
+                { question: "How do I get a quote for my luxury assets?",  answer: `
                 
                   <p >Getting a quote is simple:</p>
                   <br/>
@@ -107,12 +108,16 @@ export default async function Home() {
                 ]}
         />
 
+
+      <ImageGallery />
+
         <ContactUs
             title="Request Your Complimentary Quote"
             description="When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events."
             backgroundImage="/contact.png"
            showGetQuoteButton={true}
         />
+
 
     
 

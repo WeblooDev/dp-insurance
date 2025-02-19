@@ -106,8 +106,8 @@ export const getServices = async (): Promise<Service[]> => {
             description: "We provide the best coverage for luxury vehicles.",
             services: [
               { image: "/ac1.png", name: "Liability Coverage", description: "Ensure peace of mind with liability coverage that protects you financially if you are responsible for property damage or bodily injury in an accident.", isDimmed: true, overlayImage:"/layer1.png"  },
-              { image: "/ac2.png", name: "Comprehensive Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.", isDimmed: true, overlayImage: "/layer2.png" },  // ✅ Dimmed with overlay
-              { image: "/ac3.png", name: "Collision Coverage", description: "This optional coverage helps pay to repair or replace your vehicle if it collides with another vehicle or object.", isDimmed: true, overlayImage:"/layer3.png"  }
+              { image: "/ac2.png", name: "Comprehensive Coverage", description: "This coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.", isDimmed: true, overlayImage: "/layer2.png" },  // ✅ Dimmed with overlay
+              { image: "/ac3.png", name: "Collision Coverage", description: "This coverage helps pay to repair or replace your vehicle if it collides with another vehicle or object.", isDimmed: true, overlayImage:"/layer3.png"  }
             ]
           },
           imageSection: { 
@@ -115,15 +115,7 @@ export const getServices = async (): Promise<Service[]> => {
             altText: "Jewelry Insurance Banner"
           },
           splitSections: [ 
-              {
-                imageUrl: "/automotiverleft.png",
-                content: [
-                  { title: "Third-Party Liability Protection ", description: "This mandatory coverage pays for damages you cause to others' property or injuries in an accident where you're at fault." },
-                  { title: "Accident Damage Protection", description: "This optional coverage helps pay to repair or replace your vehicle if it overturns or collides with another vehicle or object." },
-                  { title: "Non-Collision Damage Protection", description: "This optional coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal." }
-                ],
-                reverse: false, // Normal order
-              },
+            
               {
                 imageUrl: "/automotiveright.png",
                 content: [
