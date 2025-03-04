@@ -44,7 +44,7 @@ export type Service = {
     title: string;
     description: string;
     backgroundImage: string;
-    showButton?: boolean; // ✅ New field (false by default)
+    showButton?: boolean; 
   };
 };
 
@@ -72,7 +72,7 @@ export const getServices = async (): Promise<Service[]> => {
           },
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
-            buttonText: "Request a Complimentary Review", // ✅ Will render "Get a Quote" button
+            buttonText: "Request a Complimentary Review", 
             backgroundImage: "/automotiveferrari.png",
           },
           faqSection: { 
@@ -106,8 +106,7 @@ export const getServices = async (): Promise<Service[]> => {
             description: "We provide the best coverage for luxury vehicles.",
             services: [
               { image: "/ac1.png", name: "Liability Coverage", description: "Ensure peace of mind with liability coverage that protects you financially if you are responsible for property damage or bodily injury in an accident.", isDimmed: true, overlayImage:"/layer1.png"  },
-              { image: "/ac2.png", name: "Comprehensive Coverage", description: "This coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.", isDimmed: true, overlayImage: "/layer2.png" },  // ✅ Dimmed with overlay
-              { image: "/ac3.png", name: "Collision Coverage", description: "This coverage helps pay to repair or replace your vehicle if it collides with another vehicle or object.", isDimmed: true, overlayImage:"/layer3.png"  }
+              { image: "/ac2.png", name: "Comprehensive Coverage", description: "This coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.", isDimmed: true, overlayImage: "/layer2.png" },  
             ]
           },
           imageSection: { 
@@ -122,7 +121,7 @@ export const getServices = async (): Promise<Service[]> => {
                   { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out anytime. We’re happy to help ensure your prized possessions are properly protected." },
             
                 ],
-                reverse: true, // Reversed order
+                reverse: true, 
               }
             ],
           sections: []
@@ -148,7 +147,7 @@ export const getServices = async (): Promise<Service[]> => {
           },
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
-            buttonText: "Email", // ✅ Will render the Email button
+            buttonText: "Email",
             backgroundImage: "/Jewelryhand.png",
           },
         faqSection: { 
@@ -196,15 +195,15 @@ export const getServices = async (): Promise<Service[]> => {
             description: "By paying a premium, the insurer agrees to cover specific jewelry-related losses as outlined in your policy. This coverage typically includes:",
             services: [
               { image: "/jc1.png", name: "Agreed Value", description: "This essential coverage pays for repair or replacement costs If your jewelry or collectibles are lost, stolen or damaged, ensuring peace of mind for your valuable items.", isDimmed: true, overlayImage:"/coverjewelryicon1.svg"  },
-              { image: "/jc2.png", name: "Worldwide coverage", description: "This coverage protects items wherever they are located, whether at home, in transit, or on display (e.g., in galleries, museums, or private events).", isDimmed: true, overlayImage: "/coverjewelryicon2.svg" },  // ✅ Dimmed with overlay
+              { image: "/jc2.png", name: "Worldwide coverage", description: "This coverage protects items wherever they are located, whether at home, in transit, or on display (e.g., in galleries, museums, or private events).", isDimmed: true, overlayImage: "/coverjewelryicon2.svg" },  
               { image: "/jc3.png", name: "Accidental breakage or damage", description: "Accidental breakage or damage coverage ensures your valuables are protected against unexpected mishaps, such as dropping, chipping, or cracking, providing comprehensive peace of mind for high-net-worth collectors.", isDimmed: true, overlayImage:"/coverjewelryicon3.svg"  }
             ]
           },
-        imageSection: { // ✅ Only Jewelry Insurance has this section
+        imageSection: { 
           mediaUrl:"/Jewelrysection1.png",
           altText: "Jewelry Insurance Banner"
         },
-        splitSections: [ // ✅ Use an array to hold multiple SplitSections
+        splitSections: [ 
             {
               imageUrl: "/jewelryright1.png",
               content: [
@@ -212,7 +211,7 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Coverage for newly acquired Items", description: "Provides automatic, temporary coverage for newly purchased items until they are officially added to the policy." },
                 { title: "Coverage for transit & shipping", description: "Insures items while being transported, whether by air, sea, or specialized collection movers." }
               ],
-              reverse: false, // Normal order
+              reverse: false,
             },
             {
               imageUrl: "/jewelryleft1.png",
@@ -220,7 +219,7 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out anytime. We’re happy to help ensure your prized possessions are properly protected." },
           
               ],
-              reverse: true, // Reversed order
+              reverse: true,
             }
           ],
         sections: []
@@ -242,7 +241,7 @@ export const getServices = async (): Promise<Service[]> => {
             description: "By paying a premium, the insurer agrees to cover specific real estate-related losses as outlined in your policy. This coverage typically includes:",
             services: [
               { image: "/rc1.png", name: "Rebuilding flexibility", description: "In the event of a fire or other loss that destroys your home, this coverage allows you to choose between rebuilding or receiving a cash settlement—putting the decision in your hands.", isDimmed: true, overlayImage:"/real1.svg"  },
-              { image: "/rc2.png", name: "Guaranteed Home Replacement Cost", description: "This coverage ensures that your High-Valued Home can be rebuilt to its original standard, even if the rebuilding costs exceed your policy limits, providing you with ultimate peace of mind.", isDimmed: true, overlayImage: "/real2.svg" },  // ✅ Dimmed with overlay
+              { image: "/rc2.png", name: "Guaranteed Home Replacement Cost", description: "This coverage ensures that your High-Valued Home can be rebuilt to its original standard, even if the rebuilding costs exceed your policy limits, providing you with ultimate peace of mind.", isDimmed: true, overlayImage: "/real2.svg" },  
               { image: "/rc3.png", name: "Personal Liability", description: "Everyday life carries risks of accidents or allegations against you and your family. Personal liability coverage protects you from financial loss by covering defense costs and damages for accidental injury or property damage.", isDimmed: true, overlayImage:"/real3.svg"  }
             ]
           },
@@ -258,7 +257,7 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Temporary Living Arrangements", description: "If a covered loss makes your home uninhabitable, this coverage will help you secure a comfortable temporary residence, whether it's a similar home in your school district or a suitable hotel." },
                 { title: "Cyber & Identity Theft", description: "Provides coverage for personal cyber risks, connected device vulnerabilities, and identity theft, ensuring protection against cyberattacks and compromised identities." }
               ],
-              reverse: false, // Normal order
+              reverse: false, 
             },
             {
               imageUrl: "/realstateleft.png",
@@ -266,12 +265,12 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out anytime. We’re happy to help ensure your prized possessions are properly protected." },
           
               ],
-              reverse: true, // Reversed order
+              reverse: true, 
             }
           ],
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
-            buttonText: "Email", // ✅ Will render the Email button
+            buttonText: "Email", 
             backgroundImage: "/realstatecover.png",
           },  
           faqSection: { 
@@ -326,23 +325,23 @@ export const getServices = async (): Promise<Service[]> => {
             description: "By paying a premium, the insurer agrees to cover specific real aviation losses as outlined in your policy. This coverage typically includes:",
             services: [
               { image: "/p1.png", name: "Hull Coverage", description: "Protects the aircraft itself against physical damage from accidents, theft, or weather-related events, whether in the air or on the ground.", isDimmed: true, overlayImage:"/covera1icon.svg"  },
-              { image: "/p2.png", name: "Liability Coverage", description: "Covers bodily injury or property damage caused to others while operating the aircraft, ensuring financial protection in case of lawsuits or claims.", isDimmed: true, overlayImage: "/covera2icon.svg" },  // ✅ Dimmed with overlay
+              { image: "/p2.png", name: "Liability Coverage", description: "Covers bodily injury or property damage caused to others while operating the aircraft, ensuring financial protection in case of lawsuits or claims.", isDimmed: true, overlayImage: "/covera2icon.svg" },  
               { image: "/p3.png", name: "Hangar Coverage", description: "Protects the hangar or storage facility you own or lease for your aircraft against physical damage, ensuring your storage space is covered in case of fire, theft, or other covered events.", isDimmed: true, overlayImage:"/covera3icon.svg"  }
             ]
           },
 
-        imageSection: { // ✅ Only Jewelry Insurance has this section
+        imageSection: { 
           mediaUrl:"/Aviationsection.png",
           altText: "Jewelry Insurance Banner"
         },
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
-          buttonText: "Email", // ✅ Will render the Email button
+          buttonText: "Email", 
           backgroundImage: "/Aviationcover.png",
         },
 
-        splitSections: [ // ✅ Use an array to hold multiple SplitSections
+        splitSections: [ 
             {
               imageUrl: "/Aviationright.png",
               content: [
@@ -350,7 +349,7 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Loss of Use Coverage", description: "Provides compensation for expenses or income lost due to the aircraft being out of service after a covered loss, helping to offset rental or alternative transportation costs." },
                 { title: "Search and Rescue Coverage", description: "Covers the costs associated with search and rescue operations in the event of an emergency, ensuring you have support in locating the aircraft and its occupants if lost or stranded." }
               ],
-              reverse: false, // Normal order
+              reverse: false, 
             },
             {
               imageUrl: "/Aviationleft.png",
@@ -358,11 +357,11 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out anytime. We’re happy to help ensure your prized possessions are properly protected." },
           
               ],
-              reverse: true, // Reversed order
+              reverse: true, 
             }
           ],
 
-          faqSection: { // ✅ Only Jewelry Insurance has this section
+          faqSection: { 
             title: "Frequently Asked Questions",
             description: "Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy.",
             faqs: [
@@ -373,7 +372,7 @@ export const getServices = async (): Promise<Service[]> => {
             ],
           },
 
-          contactUsContent: { // ✅ Add contact section dynamically
+          contactUsContent: { 
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/Aviationfooter.png",
@@ -398,7 +397,7 @@ export const getServices = async (): Promise<Service[]> => {
             description: "By paying a premium, the insurer agrees to cover specific marine-related losses as outlined in your policy. This coverage typically includes:",
             services: [
               { image: "/y1.png", name: "Agreed Value Coverage", description: "Provides full reimbursement based on the pre-determined value of your yacht/watercraft in the event of a total loss, with no depreciation applied.", isDimmed: true, overlayImage:"/marine1icon.svg"  },
-              { image: "/y2.png", name: "Liability Protection", description: "Customized coverage limits to match your needs, including legal defense costs, liability under the Oil Pollution Act of 1990, wreck removal expenses, and Jones Act coverage for your paid crew.", isDimmed: true, overlayImage: "/marine2icon.svg" },  // ✅ Dimmed with overlay
+              { image: "/y2.png", name: "Liability Protection", description: "Customized coverage limits to match your needs, including legal defense costs, liability under the Oil Pollution Act of 1990, wreck removal expenses, and Jones Act coverage for your paid crew.", isDimmed: true, overlayImage: "/marine2icon.svg" },   ✅
               { image: "/y3.png", name: "Uninsured / Underinsured Boater Coverage", description: "Provides compensation for bodily injuries sustained by individuals on the insured yacht/watercraft when injured by another vessel's uninsured or underinsured owner or operator.", isDimmed: true, overlayImage:"/time.svg"  }
             ]
           },
@@ -410,7 +409,7 @@ export const getServices = async (): Promise<Service[]> => {
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
-          buttonText: "Email", // ✅ Will render the Email button
+          buttonText: "Email",
           backgroundImage: "/Yachtscover.png",
         },
 
@@ -422,7 +421,7 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Precautionary Measures", description: "Covers reasonable expenses, up to the policy limit, for hauling, fueling, or docking the insured watercraft to protect it from an approaching covered peril, such as a hurricane." },
                 { title: "Dinghy/Tender Coverage", description: "Provides protection for your dinghy or tender used to travel between your yacht and shore when moored offshore." }
               ],
-              reverse: false, // Normal order
+              reverse: false, 
             },
             {
               imageUrl: "/Yachtsleft.png",
@@ -430,7 +429,7 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out anytime. We’re happy to help ensure your prized possessions are properly protected." },
           
               ],
-              reverse: true, // Reversed order
+              reverse: true, 
             }
           ],
 
@@ -446,7 +445,7 @@ export const getServices = async (): Promise<Service[]> => {
             ],
           },
 
-          contactUsContent: { // ✅ Add contact section dynamically
+          contactUsContent: { 
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/Yachtsfooter.png",
@@ -470,7 +469,7 @@ export const getServices = async (): Promise<Service[]> => {
             description: "By paying a premium, the insurer agrees to cover specific losses related to your wine and spirits collection as outlined in your policy.",
             services: [
               { image: "/w1.png", name: "Broad Coverage for Loss or Damage", description: "Protects your wine collection against risks such as fire, theft, breakage, vandalism, and temperature-related damage due to mechanical failure (e.g., wine cellar cooling system malfunctions).", isDimmed: true, overlayImage:"/wineicon1.svg"  },
-              { image: "/w2.png", name: "Worldwide Coverage", description: "Ensures your wine collection is protected whether stored at home, in a secondary residence, or in transit (e.g., shipping or moving between locations).", isDimmed: true, overlayImage: "/wineicon2.svg" },  // ✅ Dimmed with overlay
+              { image: "/w2.png", name: "Worldwide Coverage", description: "Ensures your wine collection is protected whether stored at home, in a secondary residence, or in transit (e.g., shipping or moving between locations).", isDimmed: true, overlayImage: "/wineicon2.svg" },  
               { image: "/w3.png", name: "Spoilage Coverage", description: "Covers spoilage caused by power outages, refrigeration failures, or climate control system malfunctions that result in temperature changes.", isDimmed: true, overlayImage:"/wineicon3.svg"  }
             ]
           },
@@ -482,7 +481,7 @@ export const getServices = async (): Promise<Service[]> => {
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
-          buttonText: "Email", // ✅ Will render the Email button
+          buttonText: "Email", 
           backgroundImage: "/spiritscover.png",
         },
 
@@ -494,7 +493,7 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Breakage Protection", description: "Covers accidental breakage, particularly for fragile sculptures or glass pieces." },
                 { title: "Loaned Art Coverage", description: "Protects pieces loaned to galleries, museums, or exhibitions." }
               ],
-              reverse: false, // Normal order
+              reverse: false,
             },
             {
               imageUrl: "/leftspirit.png",
@@ -502,11 +501,11 @@ export const getServices = async (): Promise<Service[]> => {
                 { title: "Eligibility and Requirement", description: "To apply for coverage, simply click Get a Free Custom Quote below. Eligibility and requirements may vary based on the type of insurance and the value of your assets. If you have any questions about the application process or coverage options, our team is here to assist you. Don’t hesitate to reach out anytime. We’re happy to help ensure your prized possessions are properly protected." },
           
               ],
-              reverse: true, // Reversed order
+              reverse: true,
             }
           ],
 
-          faqSection: { // ✅ Only Jewelry Insurance has this section
+          faqSection: { 
             title: "Frequently Asked Questions",
             description: "Considering duPont REGISTRY Insurance? Here’s what you need to know about us before you sign up for a policy.",
             faqs: [
@@ -531,7 +530,7 @@ export const getServices = async (): Promise<Service[]> => {
             ],
           },
 
-          contactUsContent: { // ✅ Add contact section dynamically
+          contactUsContent: { 
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/footerimagespirit.png",
@@ -545,7 +544,7 @@ export const getServices = async (): Promise<Service[]> => {
 
 
 export const getServiceById = async (id: string): Promise<Service | null> => {
-    const services = await getServices(); // ✅ Ensure `await` is used here
+    const services = await getServices(); 
     return services.find((service) => service.id === id) || null;
 };
   

@@ -6,7 +6,7 @@ interface MediaSectionProps {
 }
 
 export default function MediaSection({ mediaUrl, altText = "Media" }: MediaSectionProps) {
-  const isVideo = /\.(mp4|webm|ogg)$/i.test(mediaUrl); // Checks if the URL is a video
+  const isVideo = /\.(mp4|webm|ogg)$/i.test(mediaUrl); 
 
   return (
     <section className="w-full p-12 flex justify-center px-4 sm:px-12">

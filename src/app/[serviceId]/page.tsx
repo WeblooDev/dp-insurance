@@ -10,14 +10,13 @@ import MediaSection from "../sections/ImageSection";
 import ServiceCard from "../sections/Template";
 import ImageGallery from "../sections/ImageGallery";
 
-// ✅ Fix: Ensure `params` is awaited
 interface ServicePageProps {
-  params: Promise<{ serviceId: string }>; // Ensure it's recognized as a Promise
+  params: Promise<{ serviceId: string }>; 
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
-  const resolvedParams = await params; // ✅ Await the params
-  const { serviceId } = resolvedParams; // ✅ Now it's a resolved object
+  const resolvedParams = await params; 
+  const { serviceId } = resolvedParams;
   const services = await getServices();
 
   if (!serviceId) {
@@ -71,7 +70,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <Request
         title={service.requestContent.title}
         backgroundImage={service.requestContent.backgroundImage}
-        buttonText={service.requestContent.buttonText} // Dynamically passing button text
+        buttonText={service.requestContent.buttonText} 
       />
     )}
 
@@ -95,7 +94,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               id={service.id}
               name={service.name}
               imageUrl={service.backgroundImage || "/default-service.jpg"}
-              index={index} // ✅ Pass the missing prop
+              index={index} 
             />
           ))}
 
@@ -121,7 +120,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
   );
 }
 
-// ✅ Fix: Ensure Next.js knows available service routes
 export async function generateStaticParams() {
   const services = await getServices();
   return services.map((service) => ({

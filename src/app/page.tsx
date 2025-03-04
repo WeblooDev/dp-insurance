@@ -17,10 +17,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen bg-white flex flex-col gap-10">
 
-
         <HeroCarousel />
-
-
 
         <section className="w-full mx-auto p-12 sm:px-12 py-12">
         <div className="title flex self-center  justify-center pb-12 text-5xl ">
@@ -33,7 +30,7 @@ export default async function Home() {
               id={service.id}
               name={service.name}
               imageUrl={service.backgroundImage || "/default-service.jpg"}
-              index={index} // ✅ Pass the missing prop
+              index={index} 
             />
           ))}
 
@@ -73,7 +70,7 @@ export default async function Home() {
       <Request
         title="Request Your Exclusive Custom Insurance Quote"   
         buttonText="Request a Complimentary Review"
-        backgroundImage="/requestMainpage.png" // Ensure the image is in the `public/` folder
+        backgroundImage="/requestMainpage.png"  
         />
 
 
@@ -119,7 +116,6 @@ export default async function Home() {
         />
 
 
-    
 
     </main>
   );

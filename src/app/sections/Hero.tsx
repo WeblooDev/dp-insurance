@@ -8,17 +8,17 @@ import { slides } from "@/data/slides";
 export default function HeroStatic() {
   const [currentImage, setCurrentImage] = useState(0);
   const [fade, setFade] = useState(true);
-  const [key, setKey] = useState(0); // Key to force re-animation
+  const [key, setKey] = useState(0); 
 
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(false);
       setTimeout(() => {
         setCurrentImage((prev) => (prev + 1) % slides.length);
-        setKey((prevKey) => prevKey + 1); // Force restart animation
+        setKey((prevKey) => prevKey + 1); 
         setFade(true);
       }, 300);
-    }, 5000); // Change image every 5 seconds
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -27,18 +27,18 @@ export default function HeroStatic() {
     <div className="relative h-[90vh] overflow-hidden">
       <div className="absolute inset-0 w-full h-full transition-opacity duration-1000" style={{ opacity: fade ? 1 : 0 }}>
         <Image
-          key={key} // Forces the animation restart
+          key={key} 
           src={slides[currentImage]}
-          alt=""
+          alt="cars"
           fill
-          className="object-cover scale-100 animate-zoomIn brightness-90" // Slightly darkened
+          className="object-cover scale-100 animate-zoomIn brightness-90" 
           priority
         />
-        {/* Semi-Transparent Black Overlay for Extra Darkness */}
-        <div className="absolute inset-0 bg-black/10" /> {/* Adjust opacity (10% black) */}
+       
+        <div className="absolute inset-0 bg-black/10" /> 
       </div>
 
-      {/* Content */}
+      
       <div className="flex h-full justify-center md:justify-between gap-6 items-center flex-col relative z-10 p-4 md:p-16 md:pt-44 text-center">
         <div className="flex flex-col items-center justify-center ">
           <h2 className="font-ivar mb-4 text-[40px] md:text-[50px] text-white">
@@ -71,21 +71,21 @@ export default function HeroStatic() {
             </a>
           </Button>
 
-          <div className="relative flex flex-col items-center">
-  <Button
-    asChild
-    size="lg"
-    className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
-  >
-    <a href="tel:+123456789">
-      <img src="/phonecall.svg" alt="Phone Icon" />
-      1-833-738-7668
-    </a>
-  </Button>
-  <span className="absolute bottom-[-30px] text-white text-sm mt-2">
-    Speak with an advisor
-  </span>
-</div>
+              <div className="relative flex flex-col items-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
+                >
+                  <a href="tel:+123456789">
+                    <img src="/phonecall.svg" alt="Phone Icon" />
+                    1-833-738-7668
+                  </a>
+                </Button>
+                <span className="absolute bottom-[-30px] text-white text-sm mt-2">
+                  Speak with an advisor
+                </span>
+              </div>
 
         </div>
       </div>

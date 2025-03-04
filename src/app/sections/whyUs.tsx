@@ -10,7 +10,7 @@ interface WhyUsProps {
     name: string; 
     description: string; 
     isDimmed?: boolean; 
-    overlayImage?: string; // ✅ Accept overlay image
+    overlayImage?: string; 
   }>;
 }
 

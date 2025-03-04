@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 interface FAQItem {
   question: string;
-  answer: string; // Contains HTML content
+  answer: string; 
 }
 
 interface FAQSectionProps {
@@ -38,7 +38,7 @@ export default function FAQSection({ title, description, faqs }: FAQSectionProps
                 </AccordionTrigger>
 
                 <AccordionContent className="text-base text-[18px] py-10 pt-0">
-                  {/* Render HTML content safely */}
+                 
                   <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </AccordionContent>
               </AccordionItem>
