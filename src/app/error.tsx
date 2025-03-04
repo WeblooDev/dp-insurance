@@ -1,4 +1,4 @@
-"use client"; // Required for error boundaries in Next.js
+"use client";
 
 import { useEffect } from "react";
 

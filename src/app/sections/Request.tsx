@@ -13,7 +13,6 @@ export default function Request({
 }: RequestProps) {
   return (
     <section className="relative min-h-[500px] w-full flex items-center justify-center my-16">
-      {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -23,13 +22,11 @@ export default function Request({
         }}
       />
 
-      {/* Content */}
       <div className="relative z-10 container px-4 md:px-6 flex flex-col justify-center items-center text-center">
         <h1 className="font-ivar text-[30px] md:text-[40px] text-white mb-6">
           {title}
         </h1>
 
-        {/* Conditional Button Rendering */}
         {buttonText?.toLowerCase() === "email" ? (
           <Button
             asChild
