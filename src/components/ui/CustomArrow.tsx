@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { cn } from "@/lib/utils"
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface CustomArrowProps {
-  onClick: () => void
-  direction: "left" | "right"
+  onClick: () => void;
+  direction: "left" | "right";
 }
 
 export default function CustomArrow({ onClick, direction }: CustomArrowProps) {
@@ -25,5 +25,5 @@ export default function CustomArrow({ onClick, direction }: CustomArrowProps) {
         className="object-contain"
       />
     </button>
-  )
+  );
 }
