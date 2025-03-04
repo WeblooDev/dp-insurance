@@ -1,4 +1,4 @@
-import { getServiceById, getServices } from "@/data/service";
+import getServiceById, { getServices } from "@/data/service";
 import { notFound } from "next/navigation";
 import Request from "../sections/Request";
 import SplitSection from "../sections/SplitSection";
@@ -11,11 +11,11 @@ import ServiceCard from "../sections/Template";
 import ImageGallery from "../sections/ImageGallery";
 
 interface ServicePageProps {
-  params: Promise<{ serviceId: string }>; 
+  params: Promise<{ serviceId: string }>;
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
-  const resolvedParams = await params; 
+  const resolvedParams = await params;
   const { serviceId } = resolvedParams;
   const services = await getServices();
 
@@ -31,13 +31,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <main className="min-h-screen bg-gray-100">
-     
-     {service.heroSection && (
+      {service.heroSection && (
         <HeroTemplate
           title={service.heroSection.title}
           description={service.heroSection.description}
           backgroundImage={service.heroSection.backgroundImage}
-          showButton={service.heroSection.showButton} 
+          showButton={service.heroSection.showButton}
         />
       )}
 
@@ -49,13 +48,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
         />
       )}
 
-    {service.imageSection && (
-      <MediaSection
-        mediaUrl={service.imageSection.mediaUrl}
-        altText={service.imageSection.altText}
-      />
-    )}
-
+      {service.imageSection && (
+        <MediaSection
+          mediaUrl={service.imageSection.mediaUrl}
+          altText={service.imageSection.altText}
+        />
+      )}
 
       {service.splitSections?.map((splitSection, index) => (
         <SplitSection
@@ -66,14 +64,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
         />
       ))}
 
-    {service.requestContent && (
-      <Request
-        title={service.requestContent.title}
-        backgroundImage={service.requestContent.backgroundImage}
-        buttonText={service.requestContent.buttonText} 
-      />
-    )}
-
+      {service.requestContent && (
+        <Request
+          title={service.requestContent.title}
+          backgroundImage={service.requestContent.backgroundImage}
+          buttonText={service.requestContent.buttonText}
+        />
+      )}
 
       {service.faqSection && (
         <FAQSection
@@ -83,39 +80,35 @@ export default async function ServicePage({ params }: ServicePageProps) {
         />
       )}
 
-<section className="w-full mx-auto p-6 pb-28 sm:px-12">
+      <section className="w-full mx-auto p-6 pb-28 sm:px-12">
         <div className="title flex self-center  justify-center pb-12 text-5xl ">
-            <h1 className="font-ivar text-[40px] tracking-tight ">Coverage Options</h1>
+          <h1 className="font-ivar text-[40px] tracking-tight ">
+            Coverage Options
+          </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 lg:gap-8">
-        {services.map((service, index) => (
+          {services.map((service, index) => (
             <ServiceCard
               key={service.id}
               id={service.id}
               name={service.name}
               imageUrl={service.backgroundImage || "/default-service.jpg"}
-              index={index} 
+              index={index}
             />
           ))}
-
         </div>
-        </section>
+      </section>
 
-        <ImageGallery />
+      <ImageGallery />
 
-
-{service.contactUsContent && (
-  <ContactUs
-    title={service.contactUsContent.title}
-    description={service.contactUsContent.description}
-    backgroundImage={service.contactUsContent.backgroundImage}
-    showGetQuoteButton={service.contactUsContent.showGetQuoteButton} 
-  />
-)}
-
-
-
-
+      {service.contactUsContent && (
+        <ContactUs
+          title={service.contactUsContent.title}
+          description={service.contactUsContent.description}
+          backgroundImage={service.contactUsContent.backgroundImage}
+          showGetQuoteButton={service.contactUsContent.showGetQuoteButton}
+        />
+      )}
     </main>
   );
 }

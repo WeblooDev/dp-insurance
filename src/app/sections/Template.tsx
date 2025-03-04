@@ -11,7 +11,12 @@ interface ServiceCardProps {
   index: number;
 }
 
-export default function ServiceCard({ id, name, imageUrl, index }: ServiceCardProps) {
+export default function ServiceCard({
+  id,
+  name,
+  imageUrl,
+  index,
+}: ServiceCardProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

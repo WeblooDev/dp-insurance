@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Inter', sans-serif !important;
+  font-family: "Inter", sans-serif !important;
   margin: 0;
 }
-
 
 @keyframes zoomIn {
   0% {
@@ -21,19 +20,18 @@ body {
   animation: zoomIn 5s ease-in-out forwards;
 }
 
-
 @font-face {
-  font-family: 'Ivar Display Hydro';
-  src: url('/fonts/IvarDisplayHydro-Regular.ttf') format('truetype');
+  font-family: "Ivar Display Hydro";
+  src: url("/fonts/IvarDisplayHydro-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 .font-ivar {
-  font-family: 'Ivar Display Hydro', sans-serif;
+  font-family: "Ivar Display Hydro", sans-serif;
 }
 
-.spe{
+.spe {
   margin-top: 15px;
   margin-bottom: 15px;
   display: flex;
@@ -41,18 +39,16 @@ body {
   gap: 5px;
 }
 
-
-.mt{
+.mt {
   margin-top: 15px;
 }
 ul {
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1.5rem;
 }
 
 li {
   padding-left: 20px;
 }
-
 
 @layer base {
   :root {

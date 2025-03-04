@@ -5,8 +5,11 @@ interface MediaSectionProps {
   altText?: string;
 }
 
-export default function MediaSection({ mediaUrl, altText = "Media" }: MediaSectionProps) {
-  const isVideo = /\.(mp4|webm|ogg)$/i.test(mediaUrl); 
+export default function MediaSection({
+  mediaUrl,
+  altText = "Media",
+}: MediaSectionProps) {
+  const isVideo = /\.(mp4|webm|ogg)$/i.test(mediaUrl);
 
   return (
     <section className="w-full p-12 flex justify-center px-4 sm:px-12">
@@ -19,13 +22,13 @@ export default function MediaSection({ mediaUrl, altText = "Media" }: MediaSecti
             muted
             playsInline
             className="object-cover rounded-lg w-full h-[30vh] sm:h-[70vh] min-h-[300px]"
-            />
+          />
         ) : (
           <Image
             src={mediaUrl}
             alt={altText}
-            width={100000} 
-            height={0} 
+            width={100000}
+            height={0}
             className="object-cover rounded-lg w-full h-auto"
             priority
           />

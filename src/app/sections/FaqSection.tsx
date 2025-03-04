@@ -1,8 +1,13 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface FAQItem {
   question: string;
-  answer: string; 
+  answer: string;
 }
 
 interface FAQSectionProps {
@@ -11,7 +16,11 @@ interface FAQSectionProps {
   faqs: FAQItem[];
 }
 
-export default function FAQSection({ title, description, faqs }: FAQSectionProps) {
+export default function FAQSection({
+  title,
+  description,
+  faqs,
+}: FAQSectionProps) {
   return (
     <section className="py-6 md:py-16">
       <div className="px-4 md:px-6">
@@ -26,7 +35,7 @@ export default function FAQSection({ title, description, faqs }: FAQSectionProps
             {faqs.map((faq, index) => (
               <AccordionItem
                 className={`${
-                  index === faqs.length - 1 ? '' : 'border-b-2 border-black'
+                  index === faqs.length - 1 ? "" : "border-b-2 border-black"
                 }`}
                 key={index}
                 value={`item-${index}`}
@@ -38,7 +47,6 @@ export default function FAQSection({ title, description, faqs }: FAQSectionProps
                 </AccordionTrigger>
 
                 <AccordionContent className="text-base text-[18px] py-10 pt-0">
-                 
                   <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </AccordionContent>
               </AccordionItem>

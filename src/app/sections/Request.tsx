@@ -6,7 +6,11 @@ interface RequestProps {
   buttonText?: string;
 }
 
-export default function Request({ title, backgroundImage, buttonText }: RequestProps) {
+export default function Request({
+  title,
+  backgroundImage,
+  buttonText,
+}: RequestProps) {
   return (
     <section className="relative min-h-[500px] w-full flex items-center justify-center my-16">
       {/* Background Image */}
@@ -21,16 +25,17 @@ export default function Request({ title, backgroundImage, buttonText }: RequestP
 
       {/* Content */}
       <div className="relative z-10 container px-4 md:px-6 flex flex-col justify-center items-center text-center">
-        <h1 className="font-ivar text-[30px] md:text-[40px] text-white mb-6">{title}</h1>
+        <h1 className="font-ivar text-[30px] md:text-[40px] text-white mb-6">
+          {title}
+        </h1>
 
         {/* Conditional Button Rendering */}
         {buttonText?.toLowerCase() === "email" ? (
-          
           <Button
             asChild
             size="lg"
             className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
-            >
+          >
             <a href="mailto:info@example.com">
               <img src="/emailicon.svg" alt="Email Icon" />
               Email
