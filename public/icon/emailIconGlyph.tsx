@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export default function EmailIcon({ className = "w-6 h-6" }) {
   return (
@@ -10,5 +10,5 @@ export default function EmailIcon({ className = "w-6 h-6" }) {
     >
       <rect x="0" y="0" width="48" height="1"></rect>
     </svg>
-  )
+  );
 }
