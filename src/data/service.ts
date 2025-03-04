@@ -159,6 +159,14 @@ export const getServices = async (): Promise<Service[]> => {
             isDimmed: true,
             overlayImage: "/layer2.png",
           },
+          {
+            image: "/ac3.png",
+            name: "Comprehensive Coverage",
+            description:
+              "This coverage helps pay to repair or replace your vehicle if it's damaged by something other than a collision, including theft, fire, vandalism, or hitting an animal.",
+            isDimmed: true,
+            overlayImage: "/layer2.png",
+          }
         ],
       },
       imageSection: {
