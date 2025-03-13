@@ -1,7 +1,6 @@
 "use client";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface ServiceCardProps {
@@ -37,14 +36,14 @@ export default function ServiceCard({
     return () => {
       if (element) observer.unobserve(element);
     };
-  }, []);
+  }, [id]);
 
   return (
-    <motion.div
+    <div
       id={`service-card-${id}`}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+      className={`transform transition-all duration-700 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
     >
       <Link href={`/${id}`} className="group relative block">
         <Card className="relative overflow-hidden h-[350px] cursor-pointer border-none rounded-none">
@@ -53,11 +52,11 @@ export default function ServiceCard({
             style={{ backgroundImage: `url(${imageUrl})` }}
           />
           <div className="absolute inset-0 p-6 flex flex-col justify-end">
-            <h3 className="font-ivar mb-4 text-[32px]  text-white ">{name}</h3>
+            <h3 className="font-ivar mb-4 text-[32px] text-white">{name}</h3>
             <span className="text-white underline">Learn More</span>
           </div>
         </Card>
       </Link>
-    </motion.div>
+    </div>
   );
 }

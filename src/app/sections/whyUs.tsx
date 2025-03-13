@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface WhyUsProps {
@@ -44,31 +43,27 @@ export default function WhyUs({ title, description, services }: WhyUsProps) {
     >
       <div className="container px-4 md:px-6">
         {/* Main Title and Description */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center mb-12 md:mb-16 space-y-4"
+        <div
+          className={`text-center mb-12 md:mb-16 space-y-4 transform transition-all duration-700 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
         >
           <h2 className="font-ivar text-[32px] md:text-[40px]">{title}</h2>
           <p className="text-[16px] w-full md:text-[18px] md:max-w-[900px] mx-auto">
             {description}
           </p>
-        </motion.div>
+        </div>
 
         {/* Three Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.2,
-                ease: "easeOut",
-              }}
-              className="flex flex-col items-center space-y-4 gap-2"
+              className={`flex flex-col items-center space-y-4 gap-2 transform transition-all duration-700 ease-out ${
+                isVisible
+                  ? `opacity-100 translate-y-0 delay-[${index * 200}ms]`
+                  : "opacity-0 translate-y-10"
+              }`}
             >
               <div className="relative w-full aspect-[4/3] overflow-hidden">
                 <img
@@ -82,7 +77,7 @@ export default function WhyUs({ title, description, services }: WhyUsProps) {
                   <img
                     src={service.overlayImage}
                     alt="Overlay"
-                    className="absolute top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2"
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                   />
                 )}
               </div>
@@ -93,7 +88,7 @@ export default function WhyUs({ title, description, services }: WhyUsProps) {
               <p className="text-center text-[16px] md:text-[18px]">
                 {service.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
