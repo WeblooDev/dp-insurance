@@ -7,15 +7,19 @@ interface HeroTemplateProps {
   title: string;
   description: string;
   backgroundImage: string;
-  showButton?: boolean;
+  showButton: boolean;
+  buttonLink: string; 
+
 }
 
 export default function HeroTemplate({
   title,
   description,
   backgroundImage,
-  showButton = false,
+  showButton = true,
+  buttonLink, 
 }: HeroTemplateProps) {
+
   return (
     <section className="relative h-[90vh] w-full overflow-hidden flex items-center md:justify-center md:flex">
       <Image
@@ -45,23 +49,26 @@ export default function HeroTemplate({
               size="lg"
               className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
             >
-              <a href="mailto:info@example.com">
-                <img src="/emailicon.svg" alt="Email Icon" />
-                Email
-              </a>
+             <a href="mailto:dupontregistryins@libertycompany.com">
+              <img src="/emailicon.svg" alt="Email Icon" />
+              Email
+            </a>
+
             </Button>
 
-            {showButton && (
-              <Button
-                asChild
-                size="lg"
-                className="rounded-[45px] !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90"
-              >
-                <a href="https://www.dupontregistry.com/insurance/get-quote">
-                  Request a Complimentary Review
-                </a>
-              </Button>
-            )}
+            {showButton && buttonLink && (
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-[45px] !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90"
+                >
+                  <a href={buttonLink}>
+                    Request a Complimentary Review
+                  </a>
+                </Button>
+              )}
+
+
 
             <div className="relative flex flex-col items-center">
               <Button

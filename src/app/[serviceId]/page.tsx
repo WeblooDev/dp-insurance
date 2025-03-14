@@ -31,14 +31,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <main className="min-h-screen bg-gray-100">
-      {service.heroSection && (
-        <HeroTemplate
-          title={service.heroSection.title}
-          description={service.heroSection.description}
-          backgroundImage={service.heroSection.backgroundImage}
-          showButton={service.heroSection.showButton}
-        />
-      )}
+     {service.heroSection && (
+      <HeroTemplate
+        title={service.heroSection.title}
+        description={service.heroSection.description}
+        backgroundImage={service.heroSection.backgroundImage}
+        showButton={true} // force true
+        buttonLink={service.heroSection.buttonLink ?? "#"} // fallback to "#" if undefined
+      />
+    )}
+
 
       {service.whyUsContent && (
         <WhyUs
@@ -65,11 +67,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
       ))}
 
       {service.requestContent && (
-        <Request
-          title={service.requestContent.title}
-          backgroundImage={service.requestContent.backgroundImage}
-          buttonText={service.requestContent.buttonText}
-        />
+       <Request
+       title={service.requestContent.title}
+       backgroundImage={service.requestContent.backgroundImage}
+       buttonText={service.requestContent.buttonText}
+       buttonLink={service.heroSection?.buttonLink} // ✅ or requestContent.buttonLink if defined there
+     />
+     
       )}
 
       {service.faqSection && (
@@ -102,12 +106,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <ImageGallery />
 
       {service.contactUsContent && (
-        <ContactUs
-          title={service.contactUsContent.title}
-          description={service.contactUsContent.description}
-          backgroundImage={service.contactUsContent.backgroundImage}
-          showGetQuoteButton={service.contactUsContent.showGetQuoteButton}
-        />
+     <ContactUs
+     title={service.contactUsContent.title}
+     description={service.contactUsContent.description}
+     backgroundImage={service.contactUsContent.backgroundImage}
+     showGetQuoteButton={service.contactUsContent.showGetQuoteButton}
+     buttonLink={service.contactUsContent.buttonLink} // ✅ Passed here
+   />
+   
       )}
     </main>
   );

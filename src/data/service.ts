@@ -7,6 +7,7 @@ export type Service = {
     title: string;
     buttonText?: string;
     backgroundImage: string;
+    buttonLink:string;
   };
   whyUsContent?: {
     title: string;
@@ -33,6 +34,7 @@ export type Service = {
     description: string;
     backgroundImage: string;
     showGetQuoteButton?: boolean; 
+    buttonLink?: string; 
 
   };
   splitSections?: Array<{
@@ -45,6 +47,8 @@ export type Service = {
     description: string;
     backgroundImage: string;
     showButton?: boolean; 
+    buttonLink?: string; 
+
   };
 };
 
@@ -57,23 +61,28 @@ export const getServices = async (): Promise<Service[]> => {
         name: "Automotive ",
         backgroundImage: "/automotive.png",
         heroSection: { 
-            title: "Premium Insurance for Luxury Cars",
-            description: "The care your luxury cars deserve, with coverage that meets the highest standards",
-            backgroundImage: "/v1hero.png",
-            showButton: true, 
-          
-          },
+          title: "Premium Insurance for Luxury Cars",
+          description: "The care your luxury cars deserve, with coverage that meets the highest standards",
+          backgroundImage: "/v1hero.png",
+          showButton: true,
+          buttonLink: "https://info.libertycompany.com/dupont-registry-auto", // ✅ Added dynamic link
+        },
+        
           contactUsContent: { 
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/automotivefooter.png",
             showGetQuoteButton: true, 
+            buttonLink: "https://info.libertycompany.com/dupont-registry-auto", // ✅ Added dynamic link
+
 
           },
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
             buttonText: "Request a Complimentary Review", 
             backgroundImage: "/automotiveferrari.png",
+            buttonLink: "https://info.libertycompany.com/dupont-registry-auto", 
+
           },
           faqSection: { 
             title: "Frequently Asked Questions",
@@ -168,20 +177,23 @@ export const getServices = async (): Promise<Service[]> => {
             title: "Premium Insurance for Fine Jewelry and Collectibles",
             description: "Protecting your most prized possessions with coverage that honors their value",
             backgroundImage: "/v2hero.png",
-
-
+            showButton: true, 
+            buttonLink: "https://info.libertycompany.com/dupont-registry-jewelry-collectibles", 
           },
           contactUsContent: { 
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/Jewelryrolex.png",
-            showGetQuoteButton: false, 
+            showGetQuoteButton: true, 
+            buttonLink: "https://info.libertycompany.com/dupont-registry-jewelry-collectibles", 
 
           },
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
-            buttonText: "Email",
+            buttonText: "Request a Complimentary Review", 
             backgroundImage: "/Jewelryhand.png",
+            buttonLink: "https://info.libertycompany.com/dupont-registry-jewelry-collectibles", 
+
           },
         faqSection: { 
             title: "Frequently Asked Questions",
@@ -266,6 +278,8 @@ export const getServices = async (): Promise<Service[]> => {
             title: "Premium Insurance for Luxury Properties",
             description: "Safeguarding your valued estates with coverage that preserves their prestige",
             backgroundImage: "/v3hero.png",
+            showButton: true, 
+            buttonLink: "https://info.libertycompany.com/dupont-registry-real-estate", 
 
         
           },      
@@ -303,7 +317,7 @@ export const getServices = async (): Promise<Service[]> => {
           ],
           requestContent: {
             title: "Request Your Exclusive Custom Insurance Quote",
-            buttonText: "Email", 
+            buttonText: "Request a Complimentary Review", 
             backgroundImage: "/realstatecover.png",
           },  
           faqSection: { 
@@ -335,7 +349,9 @@ export const getServices = async (): Promise<Service[]> => {
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/realstatefooter.png",
-            showGetQuoteButton: false, 
+            showGetQuoteButton: true, 
+            buttonLink: "https://info.libertycompany.com/dupont-registry-real-estate", 
+
 
           },
         sections: []
@@ -349,8 +365,9 @@ export const getServices = async (): Promise<Service[]> => {
             title: "Premium Insurance for Aircraft Owners",
             description: "Securing your aviation investments with the highest level of protection",
             backgroundImage: "/v4hero.png",
+            showButton: true, 
+            buttonLink: "https://info.libertycompany.com/dupont-registry-planes", 
 
-         
           },
 
           whyUsContent: {
@@ -370,8 +387,10 @@ export const getServices = async (): Promise<Service[]> => {
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
-          buttonText: "Email", 
+          buttonText: "Request a Complimentary Review", 
           backgroundImage: "/Aviationcover.png",
+          buttonLink: " https://info.libertycompany.com/dupont-registry-planes", 
+
         },
 
         splitSections: [ 
@@ -409,6 +428,9 @@ export const getServices = async (): Promise<Service[]> => {
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/Aviationfooter.png",
+            showGetQuoteButton: true, 
+            buttonLink: " https://info.libertycompany.com/dupont-registry-planes", 
+
           },
         sections: []
       },
@@ -421,6 +443,8 @@ export const getServices = async (): Promise<Service[]> => {
             title: "Premium Insurance for Yachts & Watercraft",
             description: "Exceptional protection for your yachts and watercraft, ensuring peace of mind on every voyage",
             backgroundImage: "/v5hero.png",
+            showButton: true, 
+            buttonLink: "https://info.libertycompany.com/dupont-registry-watercraft", 
 
           
           },
@@ -442,7 +466,7 @@ export const getServices = async (): Promise<Service[]> => {
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
-          buttonText: "Email",
+          buttonText: "Request a Complimentary Review", 
           backgroundImage: "/Yachtscover.png",
         },
 
@@ -482,6 +506,8 @@ export const getServices = async (): Promise<Service[]> => {
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/Yachtsfooter.png",
+            showGetQuoteButton: true, 
+            buttonLink: "https://info.libertycompany.com/dupont-registry-watercraft", 
           },
           sections: []
 
@@ -494,7 +520,10 @@ export const getServices = async (): Promise<Service[]> => {
         heroSection: { 
             title: "Premium Insurance for Wine and Spirits",
             description: "Preserving the rarity and value of your collection as it matures with time",
-            backgroundImage: "/v6hero.png",       
+            backgroundImage: "/v6hero.png",   
+            showButton: true, 
+            buttonLink: "https://info.libertycompany.com/dupont-registry-wine-spirits", 
+
           },
           
           whyUsContent: {
@@ -514,8 +543,10 @@ export const getServices = async (): Promise<Service[]> => {
 
         requestContent: {
           title: "Request Your Exclusive Custom Insurance Quote",
-          buttonText: "Email", 
+          buttonText: "Request a Complimentary Review", 
           backgroundImage: "/spiritscover.png",
+          buttonLink: "https://info.libertycompany.com/dupont-registry-wine-spirits", 
+
         },
 
         splitSections: [ 
@@ -567,6 +598,10 @@ export const getServices = async (): Promise<Service[]> => {
             title: "Request Your Complimentary Quote",
             description: "When it comes to safeguarding what matters most, trust in comprehensive protection that keeps your assets secure from unexpected events.",
             backgroundImage: "/footerimagespirit.png",
+            showGetQuoteButton: true, 
+
+            buttonLink: "https://info.libertycompany.com/dupont-registry-wine-spirits", 
+
           },
           sections: []
 

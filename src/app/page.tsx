@@ -69,7 +69,9 @@ export default async function Home() {
         title="Request Your Exclusive Custom Insurance Quote"
         buttonText="Request a Complimentary Review"
         backgroundImage="/requestMainpage.png"
+        
       />
+      
 
       <SplitSection
         imageUrl="/heroSplit-right.png"

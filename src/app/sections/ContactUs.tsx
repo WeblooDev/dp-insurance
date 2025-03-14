@@ -5,6 +5,7 @@ interface ContactUsProps {
   description: string;
   backgroundImage: string;
   showGetQuoteButton?: boolean;
+  buttonLink?: string; // ✅ New prop added
 }
 
 export default function ContactUs({
@@ -12,6 +13,7 @@ export default function ContactUs({
   description,
   backgroundImage,
   showGetQuoteButton,
+  buttonLink, // ✅ Destructure the new prop
 }: ContactUsProps) {
   return (
     <section className="relative min-h-[600px] w-full flex items-center justify-center">
@@ -36,7 +38,7 @@ export default function ContactUs({
             size="lg"
             className="gap-2 rounded-[45px] border border-white !text-white !bg-transparent hover:bg-white hover:text-black hover:opacity-80"
           >
-            <a href="mailto:info@example.com">
+            <a href="mailto:dupontregistryins@libertycompany.com">
               <img src="/emailicon.svg" alt="Email Icon" />
               Email
             </a>
@@ -48,7 +50,12 @@ export default function ContactUs({
               size="lg"
               className="rounded-[45px] !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90"
             >
-              <a href="https://www.dupontregistry.com/insurance/get-quote">
+              <a
+                href={
+                  buttonLink ||
+                  "https://www.dupontregistry.com/insurance/get-quote"
+                }
+              >
                 Request a Complimentary Review
               </a>
             </Button>
