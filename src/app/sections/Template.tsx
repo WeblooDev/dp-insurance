@@ -7,14 +7,13 @@ interface ServiceCardProps {
   id: string;
   name: string;
   imageUrl: string;
-  index: number;
 }
 
 export default function ServiceCard({
   id,
   name,
   imageUrl,
-  index,
+  
 }: ServiceCardProps) {
   const [isVisible, setIsVisible] = useState(false);
 

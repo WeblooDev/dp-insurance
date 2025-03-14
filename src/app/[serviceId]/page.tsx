@@ -91,13 +91,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 lg:gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <ServiceCard
               key={service.id}
               id={service.id}
               name={service.name}
               imageUrl={service.backgroundImage || "/default-service.jpg"}
-              index={index}
             />
           ))}
         </div>

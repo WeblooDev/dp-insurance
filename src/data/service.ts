@@ -319,6 +319,8 @@ export const getServices = async (): Promise<Service[]> => {
             title: "Request Your Exclusive Custom Insurance Quote",
             buttonText: "Request a Complimentary Review", 
             backgroundImage: "/realstatecover.png",
+            buttonLink: "https://info.libertycompany.com/dupont-registry-real-estate", 
+
           },  
           faqSection: { 
             title: "Frequently Asked Questions",
@@ -468,6 +470,8 @@ export const getServices = async (): Promise<Service[]> => {
           title: "Request Your Exclusive Custom Insurance Quote",
           buttonText: "Request a Complimentary Review", 
           backgroundImage: "/Yachtscover.png",
+          buttonLink: "https://info.libertycompany.com/dupont-registry-watercraft", 
+
         },
 
         splitSections: [ 
