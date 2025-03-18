@@ -46,7 +46,7 @@ export default function Request({
             size="lg"
             className="flex items-center justify-center gap-2 rounded-[45px] transition-all duration-300 !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90"
           >
-            <a href={buttonLink ?? "https://www.dupontregistry.com/insurance/get-quote"}>
+            <a href={buttonLink ?? "https://info.libertycompany.com/dupont-registry-quote"}>
               {buttonText || "Get a Quote"}
             </a>
           </Button>

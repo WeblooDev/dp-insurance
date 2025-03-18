@@ -53,7 +53,7 @@ export default function ContactUs({
               <a
                 href={
                   buttonLink ||
-                  "https://www.dupontregistry.com/insurance/get-quote"
+                  " https://info.libertycompany.com/dupont-registry-quote"
                 }
               >
                 Request a Complimentary Review

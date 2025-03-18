@@ -69,7 +69,7 @@ export default function HeroStatic() {
             size="lg"
             className="rounded-[45px] !bg-[#01B7E8] !text-white hover:bg-[#0193BA] hover:opacity-90"
           >
-            <a href="https://www.dupontregistry.com/insurance/get-quote">
+            <a href=" https://info.libertycompany.com/dupont-registry-quote">
               Request a Complimentary Review
             </a>
           </Button>
